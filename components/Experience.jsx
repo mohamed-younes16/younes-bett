@@ -7,6 +7,7 @@ import {  github, reactjs } from "@/assets"
 import next from "@/assets/next.png"
 import { useState } from "react"
 import Image from "next/image"
+
 const Experience = () => {
   const [limit , setlimit]= useState(5)
   const handlego = (e,link)=>{
@@ -38,9 +39,12 @@ const Experience = () => {
         </motion.p>
         <div className="flex gap-10  mt-10 justify-center flex-wrap">
           {projects.slice(0,limit).map((e,i)=> 
-          <div data-speed={(0.1* i ).toFixed(1)} key={i} className="active:scale-95 transition-all">
+          <div data-speed={(0.1* i ).toFixed(1)} key={i}
+          className="active:scale-95 transition-all relative ">
+ 
+            <Tilt   >
 
-            <Tilt  >
+            
                 <div onClick={ev=>handlego(ev,e.source_code_link ? e.source_code_link : "#contact")}
                    target={e.source_code_link ? "_blank" : "_self"}
                    rel="noreferrer" >
@@ -50,7 +54,8 @@ const Experience = () => {
                         initial="hidden"
                         whileInView={"show"}
                         viewport={{once:true,amount:0.4}}
-                        className='w-full sm:w-[360px] max-w-[360px] relative transition-all  green-pink-gradient 
+                        className='w-full  z-30 sm:w-[360px] max-w-[360px]
+                         relative transition-all  green-pink-gradient 
                         p-[2px] rounded-3xl shadow-card'
                         >
                           {e.next ? (
@@ -66,7 +71,7 @@ const Experience = () => {
 
                           
                           }
-                          <div className="bg-tertiary   z-10 p-5 min-h-[560px] rounded-3xl">
+                          <div className={`bg-[url(/blob${Math.ceil( Math.random() *4)}.svg)]   z-10 p-5 min-h-[560px]  bg-cover rounded-3xl`}>
                             
                             <div className="rounded-3xl h-[230px] relative overflow-hidden"> 
                             <div  style={{animationDuration:"3s"}}  className="black-gradient animate-spin duration-1000 absolute right-2 top-2 p-2 rounded-full " >
@@ -76,7 +81,7 @@ const Experience = () => {
                             
                             
                             <Image src={e.image}  alt={e.name} className=" object-cover  w-full h-full rounded-3xl" style={{objectPosition:e.dir}}  />
-                            </div>
+                            </div> 
                             <p className="font-bold my-4">
                               {e.name}
                             </p>
@@ -84,7 +89,7 @@ const Experience = () => {
                               {e.description}
                             </p>
                             <div className="flex flex-wrap gap-3 relative z-20  mt-6">
-                              {e.tags.map(e=><p key={e.name} className={`${e.color}`}>#{e.name}</p>)}
+                              {e.tags.map(e=><p key={e.name} className={`${e.color} text-red-80`}>#{e.name}</p>)}
                             </div>
                           </div>
 

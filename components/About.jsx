@@ -4,7 +4,6 @@ import { motion } from "framer-motion"
 import { services } from "@/constants"
 import { Tilt } from "react-tilt"
 import {fadeIn} from "@/utils/motion"
-import { Sectionwrapper } from "../hoc/sectionwrapper"
 import Image from "next/image"
 const About = () => {
   
@@ -59,4 +58,4 @@ const About = () => {
   )
 }
 
-export default Sectionwrapper( About ,"about")
+export default  About 

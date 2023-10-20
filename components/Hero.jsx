@@ -21,7 +21,7 @@ const Hero = () => {
                       I develop Web-Apps Using React and Tailwindcss , NextJS ,Zustand, MongoDB , NodeJS <span className="bg-violet-800 inline-block h-4 w-4 rounded-full"/>
                     </p>
                 </div>
-                
+                 
           
         </div>
 

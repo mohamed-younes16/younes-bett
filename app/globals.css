@@ -11,6 +11,11 @@
   initial-value: 80deg;
   inherits: false;
 }
+.my-name {
+  color: transparent;
+    background-image: linear-gradient(36deg, rgb(124 58 237)50%, #abefff 55%, rgb(124 58 237)61%);
+    -webkit-background-clip: text;
+}
 a {
   color:  inherit;
   text-decoration: none;

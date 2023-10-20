@@ -15,7 +15,7 @@ const Hero = () => {
                 
                 <div className="z-40">
                     <h1 className="text-[6rem] max-lg:text-[4.3rem] max-[400px]:text-[35px] max-sm:text-[40px] whitespace-nowrap font-bold my-6">
-                      Hi , I &rsquo; m  <span className=" text-violet-600">Younes</span>
+                      Hi , I &rsquo; m  <span className="my-name ">Younes</span>
                     </h1>
                     <p className="text-[2.2rem]  max-sm:text-[1.3rem] max-md:text-[1.5rem] max-w-xl">
                       I develop Web-Apps Using React and Tailwindcss , NextJS ,Zustand, MongoDB , NodeJS <span className="bg-violet-800 inline-block h-4 w-4 rounded-full"/>

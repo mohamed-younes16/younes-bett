@@ -133,7 +133,7 @@ const Contact = () => {
                               
                               disabled={loading ||  submitted }
 
-                              className={` ${submitted ? "bg-green-600 animate-pulse":""} 
+                              className={` ${!loading && submitted? "bg-green-600 animate-pulse":""} 
                               my-6 rounded-xl p-4 hover:text-white 
                                hover:bg-black-200 transition duration-300 border-2 
                                bg-secondary text-black w-fit mx-auto `}

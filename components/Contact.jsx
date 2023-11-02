@@ -8,6 +8,9 @@ import CanvasEarth from "./canvas/Earth"
 import emailjs from "@emailjs/browser"
 import {useState} from "react"
 
+import { GithubIcon, InstagramIcon, LinkedinIcon, TwitterIcon, Youtube, YoutubeIcon } from "lucide-react"
+import { toast } from "sonner"
+
 
 
 const Contact = () => {
@@ -25,6 +28,7 @@ const Contact = () => {
 
  const sented = ()=> {
     setsubbmitted(true)
+toast.success("your message has been Sent successfully 👌")
     setTimeout(() => {
       setsubbmitted(false)
     }, 10000);
@@ -37,51 +41,58 @@ const Contact = () => {
   }
   const handlesubmit = e=> {
     e.preventDefault()
-    setloading(true)
-    emailjs.send(
-      process.env.NEXT_PUBLIC_SERVICE,
-    process.env.NEXT_PUBLIC_TEMPLATE,
-    {from_name:inputs.name,
-      to_name:"younes",
-      from_email:inputs.email,
-      form_feedback:inputs.feedback,
-      to_email:process.env.NEXT_PUBLIC_TO_EMAIL
-    },process.env.NEXT_PUBLIC_KEYOFEMAIL
-    
-    ).then(()=>{
+    if(   inputs.name && inputs.email && inputs.feedback  ) {
+      setloading(true)
+        emailjs.send(
+          process.env.NEXT_PUBLIC_SERVICE,
+        process.env.NEXT_PUBLIC_TEMPLATE,
+        {from_name:inputs.name,
+          to_name:"younes",
+          from_email:inputs.email,
+          form_feedback:inputs.feedback,
+          to_email:process.env.NEXT_PUBLIC_TO_EMAIL
+        },process.env.NEXT_PUBLIC_KEYOFEMAIL
+        
+        ).then(()=>{
 
-      sented()
+          sented()
 
-      setloading(false)
+          setloading(false)
 
-      setinputs({
-        name:"",
-        email:"",
-        feedback:""
-      })
-      
-    }).catch(err=>{
-      setloading(false)
-        alert("something went wrong ")
-      console.log(err)
-    })
+          setinputs({
+            name:"",
+            email:"",
+            feedback:""
+          })
+          
+        }).catch(err=>{
+          setloading(false)
+            toast.error("something went wrong ")
+          console.log(err)
+        })
+
+    }
+  
     
   }
 
   return (
 
     <div className="max-w-7xl mx-auto  flex-1 mt-20  ">
+
 <div className="flex px-3 relative max-lg:flex-col-reverse  max-lg:items-center ">
-  <p className="text-xl absolute hidden max-md:flex text-violet-400 font-semibold top-2 left-1/2 max-sm:text-sm -translate-x-1/2 whitespace-nowrap">grab the planet with two fingers and drag</p>
+
    <motion.div
        variants={slideIn("left", "tween", 0.2,1)}
        initial="hidden"
        whileInView={"show"}
-       viewport={{once:true}}>
+       viewport={{once:true}}
+       className="bg-[url(/curves.svg)]  bg-[length:800px] "
+       >
 
        
       
-      <div className="flex flex-col p-6 flex-1 min-w-[390px] max-sm:min-w-[250px]  backdrop-blur-md  border border-white  bg-white 
+      <div className="flex flex-col p-6 flex-1 min-w-[390px] max-sm:min-w-[250px]   border border-white  bg-white 
       shadow-inner shadow-white !bg-opacity-10 rounded-3xl ">
           <p className="text-secondary text-2xl">Get In Touch</p>
           <p className="font-bold text-4xl max-sm:text-3xl mt-6 max-md:mb-6 mb-16">Contact</p>
@@ -94,7 +105,8 @@ const Contact = () => {
             whileInView={"show"}
                   viewport={{once:true}}>
                 <label htmlFor="input-name" className=" font-medium text-lg">your name </label>
-                      <input id="input-name" name="name" className="p-4 my-6 rounded-xl w-full bg-black-100 text-xl text-secondary" 
+                      <input id="input-name"  value={inputs.name}  name="name"
+                       className="p-4 my-6 rounded-xl w-full    max-md:text-sm bg-black-100 text-xl text-secondary" 
                           placeholder="your name..." onChange={e=> handlechange(e)}/>
 
           </motion.div>
@@ -106,10 +118,11 @@ const Contact = () => {
             viewport={{once:true}}>
 
 
-                  <label htmlFor="input-name"  className=" font-medium text-lg">your email </label>
-                  <input  onChange={e=> handlechange(e)} type="email" name="email" id="email" 
-                            className="px-3 py-2 placeholder-slate-400
-                            valid:text-green-700
+                  <label htmlFor="input-email"  className=" font-medium text-lg">your email </label>
+                  <input value={inputs.email}   onChange={e=> handlechange(e)} type="email" name="email" id="input-email" 
+                            className="px-3 my-2 py-4 text-xl placeholder-slate-400
+                            valid:text-green-700 bg-black-100
+                            max-md:text-sm
                             focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1 invalid:border-pink-500
                             invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500 "  placeholder="you@example.com" />
                   </motion.div>
@@ -125,10 +138,11 @@ const Contact = () => {
             >
                         <label htmlFor="input-feedback"  className=" font-medium text-lg">A message  </label>
 
-                            <textarea  onChange={e=> handlechange(e)} id="input-feedback"  
+                            <textarea  onChange={e=> handlechange(e)} value={inputs.feedback} id="input-feedback"  
                             name="feedback" className="p-4 w-full  min-h-[200px] my-6 rounded-xl
-                             bg-black-100 text-xl text-secondary"
+                             bg-black-100 text-xl    max-md:text-sm text-secondary"
                               placeholder="submit a feedback if you want... " />
+                             {  inputs.name && inputs.email && inputs.feedback  && 
                               <button 
                               
                               disabled={loading ||  submitted }
@@ -138,12 +152,57 @@ const Contact = () => {
                                hover:bg-black-200 transition duration-300 border-2 
                                bg-secondary text-black w-fit mx-auto `}
                                 type="submit">{loading && !submitted ? "sending....": submitted ?"":"send"}
-                                 {!loading && submitted && "submitted succefully"} </button>
+                                 {!loading && submitted && "submitted succefully"} </button>}
                               
         </motion.div>
 
      
           </form>
+          {/* <div className=" transition-all rounded-full  w-44 h-44  ">
+            
+            <div className="flex w-full  h-1/2  ">
+
+          <div  className="p-4 flex justify-end  rounded-tl-full  bg-slate-900  hover:-translate-y-2 
+            shadow-lg
+            hover:shadow-slate-300 rounded-br-lg overflow-hidden
+           hover:-translate-x-2 items-end flex-1 transition-all hover:bg-violet-700 hover:scale-110  w-14  text-3xl"> 
+           <InstagramIcon  className=" h-10  w-10  "/> 
+           </div>
+            
+           <div  className="p-4  flex-1  flex justify-start items-end transition-all
+            hover:-translate-y-2 
+            shadow-lg
+            hover:shadow-slate-300
+            hover:translate-x-2 
+             rounded-tr-full  bg-slate-900  hover:bg-cyan-500 hover:scale-110  w-14  text-3xl"> 
+           <TwitterIcon  className=" h-10  w-10  "/> 
+           </div>
+            </div>
+           
+             
+            <div className="flex w-full h-1/2   ">
+
+                <div  className="p-4 flex justify-end items-start  flex-1 transition-all  rounded-bl-full
+                 hover:translate-y-2 
+                 shadow-lg
+                 hover:shadow-slate-300
+                 hover:-translate-x-2 
+                 bg-slate-900   hover:bg-blue-700 hover:scale-110  w-14  text-3xl"> 
+                <LinkedinIcon  className=" h-10  w-10  "/> 
+                </div>
+
+                <div  className="p-4  flex justify-start items-start   rounded-br-full  flex-1  transition-all
+                 hover:translate-y-2   shadow-lg
+                 hover:shadow-slate-300
+
+                 hover:translate-x-2 
+                  bg-slate-900   hover:bg-red-600 hover:scale-110  w-14  text-3xl"> 
+                <YoutubeIcon  className=" h-10  w-10  "/> 
+                </div>
+
+            </div>
+            
+          </div> */}
       </div>
       </motion.div>
 

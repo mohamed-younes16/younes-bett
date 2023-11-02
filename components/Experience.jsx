@@ -50,7 +50,7 @@ const Experience = () => {
                    rel="noreferrer" >
                         <motion.div 
                       
-                        variants={fadeIn("left" , "spring",  0.5, 2)}
+                        variants={fadeIn("left" , "spring",  0.1*i, 2)}
                         initial="hidden"
                         whileInView={"show"}
                         viewport={{once:true,amount:0.4}}
@@ -110,8 +110,8 @@ const Experience = () => {
 
           
            {projects.length >= limit && 
-           <> <div className="inset-x-0  max-lg:w-[100dvw] top-0 -translate-y-2/3  flex justify-center bg-gradient-to-t
-            to-[#0303037a] py-32 z-50 rounded-xl blur-md backdrop-blur-md  pb-8 pointer-events-none from-[#070637] 
+           <> <div className="inset-x-0   max-lg:w-[100dvw] top-0 -translate-y-2/3  flex justify-center
+            py-56 bg-[#080635]  bottom-36 z-50 rounded-xl blur-xl   pointer-events-none  
              absolute">
              </div> <button onClick={()=>setlimit(s=>s+3)} type="button" className="relative
               bg-slate-700 

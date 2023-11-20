@@ -6,7 +6,18 @@ import { Tilt } from "react-tilt"
 import {fadeIn} from "@/utils/motion"
 import Image from "next/image"
 const About = () => {
-  
+  var twoSum = function(nums, target) {
+    let oldIndexes = {}
+    for (let i = 0 ; i < nums.length ; i++) {
+        let currentNumber = nums[i] 
+        let wantedValue = target - currentNumber 
+        let index2 = oldIndexes[wantedValue] 
+        if(index2 !== null) {
+            return [ index2 ,i]
+        }
+            else { oldIndexes[currentNumber] = i }
+    }
+};
   return (
     <div className="px-6 max-w-7xl mx-auto mt-40" id="about" >
       

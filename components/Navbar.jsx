@@ -15,8 +15,8 @@ const Navbar = () => {
         const currentScrollPos = window.scrollY
         
 
-        ref.current.classList.toggle("bg-black", currentScrollPos > prevScrollPos.current);
-        ref.current.classList.toggle("bg-tertiary", currentScrollPos < prevScrollPos.current);
+        ref.current.classList.toggle("bg-transparent", currentScrollPos > prevScrollPos.current);
+        ref.current.classList.toggle("bg-black", currentScrollPos < prevScrollPos.current);
   
         prevScrollPos.current = currentScrollPos
       };
@@ -34,7 +34,7 @@ const Navbar = () => {
 
     
   return (
-    <nav ref={ref} className=" fixed  w-full z-50  transition duration-500 p-4
+    <nav ref={ref} className=" fixed  backdrop-blur-lg w-full z-50  transition duration-500 p-4
     ">
 
       <div className="container mx-auto">

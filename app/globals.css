@@ -65,10 +65,7 @@ html {
   color-scheme: dark;
 }
 
-.main {
-   background-image: linear-gradient(180deg, #050816 10%, #09092f,#0c0425  ,#070638 85% , #0c0425   ); 
 
-}
 
 .hash-span {
   margin-top: -100px;
@@ -78,19 +75,21 @@ html {
 
 .my-name {
   -webkit-background-clip: text;
-  background-image: linear-gradient(90deg , #a40000 0%,#4106e3 31%, #00e1ff 66%);
+  background-image: linear-gradient(90deg , #eeff00 0%,#00ff33 31%, #ffaa00 66%);
   color: transparent;
-  animation: nameChange 10s infinite linear alternate;
-  background-size: 2099px;
-  background-position: var(--per);
+   animation: bgChange 10s infinite linear alternate;
+  filter: hue-rotate(var(--rotate));
+
 }
 
-.hero {
+/* .hero {
 
   background-size: cover;
-  background-image:  conic-gradient(from var(--rotate) ,#07091e 156deg 117deg, #979797 163deg,
-   #06081c 170deg 337deg, #979797 344deg, #07091e 352deg );;
-}
+  background-image:  conic-gradient(from var(--rotate) ,#000000 156deg 117deg, #979797 163deg,
+   #000000 170deg 337deg, #979797 344deg, #000000 352deg );;
+   background-image:radial-gradient(366px at  200px  150px ,rgb(63 63 69 / 45%) , black 89% )
+
+} */
 
 @media ( 900px <= width ) {
 .hero {

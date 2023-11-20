@@ -38,9 +38,9 @@ const Experience = () => {
             
         </motion.p>
         <div className="flex gap-10  mt-10 justify-center flex-wrap">
-          {projects.slice(0,limit).map((e,i)=> 
+          {projects.map((e,i)=> 
           <div data-speed={(0.1* i ).toFixed(1)} key={i}
-          className="active:scale-95 transition-all relative ">
+          className={`active:scale-95 transition-all  relative ${i < limit ?" h-[560px] w-[350px] ":"!h-0 !w-0 overflow-hidden" } `}>
  
             <Tilt   >
 
@@ -111,7 +111,7 @@ const Experience = () => {
           
            {projects.length >= limit && 
            <> <div className="inset-x-0   max-lg:w-[100dvw] top-0 -translate-y-2/3  flex justify-center
-            py-56 bg-[#080635]  bottom-36 z-50 rounded-xl blur-xl   pointer-events-none  
+            py-56 bg-black  bottom-36 z-50 rounded-xl blur-xl   pointer-events-none  
              absolute">
              </div> <button onClick={()=>setlimit(s=>s+3)} type="button" className="relative
               bg-slate-700 

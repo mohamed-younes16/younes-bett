@@ -19,7 +19,7 @@ export const textVariant = (delay) => {
   export const fadeIn = (direction, type, delay, duration) => {
     return {
       hidden: {
-      translateX: direction === "left" ? 50 : direction === "right" ? -50 : 0,
+      translateX: direction === "left" ? 30 : direction === "right" ? -30 : 0,
        opacity:0
        
       },

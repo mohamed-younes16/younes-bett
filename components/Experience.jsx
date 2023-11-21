@@ -40,7 +40,7 @@ const Experience = () => {
         <div className="flex gap-10  mt-10 justify-center flex-wrap">
           {projects.map((e,i)=> 
           <div data-speed={(0.1* i ).toFixed(1)} key={i}
-          className={`active:scale-95 transition-all  relative ${i < limit ?" h-[560px] w-[350px] ":"!h-0 !w-0 overflow-hidden" } `}>
+          className={`active:scale-95 transition-all  duration-700 relative ${i < limit ?" h-[560px] w-[350px] ":"!h-0 !w-0 overflow-hidden" } `}>
  
             <Tilt   >
 
@@ -55,7 +55,7 @@ const Experience = () => {
                         whileInView={"show"}
                         viewport={{once:true,amount:0.4}}
                         className='w-full  z-30 sm:w-[360px] max-w-[360px]
-                         relative transition-all  green-pink-gradient 
+                         relative transition-all  
                         p-[2px] rounded-3xl shadow-card'
                         >
                           {e.next ? (
@@ -71,7 +71,8 @@ const Experience = () => {
 
                           
                           }
-                          <div className={`bg-[url(/blob${Math.ceil( Math.random() *4)}.svg)]   z-10 p-5 min-h-[560px]  bg-cover rounded-3xl`}>
+                          <div className={`  w-fit outline-4 outline outline-neutral-700  bg-[url(/blob${Math.ceil( Math.random() *4)}.svg)] 
+                  border-neutral-500 border-[2px] shadow-card  z-10 p-5 min-h-[560px]  bg-cover rounded-3xl`}>
                             
                             <div className="rounded-3xl h-[230px] relative overflow-hidden"> 
                             <div  style={{animationDuration:"3s"}}  className="black-gradient animate-spin duration-1000 absolute right-2 top-2 p-2 rounded-full " >
@@ -111,7 +112,11 @@ const Experience = () => {
           
            {projects.length >= limit && 
            <> <div className="inset-x-0   max-lg:w-[100dvw] top-0 -translate-y-2/3  flex justify-center
-            py-56 bg-black  bottom-36 z-50 rounded-xl blur-xl   pointer-events-none  
+            py-56  bottom-36 z-50 bg-[#060606] rounded-xl blur-2xl   pointer-events-none  
+             absolute">
+             </div> 
+             <div className="inset-x-0   max-lg:w-[100dvw] top-0 -translate-y-2/3  flex justify-center
+            py-56 backdrop-blur-lg bottom-36 z-40 rounded-xl   pointer-events-none  
              absolute">
              </div> <button onClick={()=>setlimit(s=>s+3)} type="button" className="relative
               bg-slate-700 

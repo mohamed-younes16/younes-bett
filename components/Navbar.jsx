@@ -2,39 +2,14 @@
 import {logo} from "@/assets/index"
 import { navLinks } from "@/constants"
 import Image from "next/image"
-import {useEffect,  useRef,  } from "react"
+
 
 const Navbar = () => {
   
   
-    const ref = useRef()
-    const prevScrollPos = useRef(0);
-
-    useEffect(() => {
-      const handleScroll = () => {
-        const currentScrollPos = window.scrollY
-        
-
-        ref.current.classList.toggle("bg-transparent", currentScrollPos > prevScrollPos.current);
-        ref.current.classList.toggle("bg-black", currentScrollPos < prevScrollPos.current);
-  
-        prevScrollPos.current = currentScrollPos
-      };
-  
-      window.addEventListener("scroll", handleScroll);
-  
-      return () => {
-        window.removeEventListener("scroll", handleScroll);
-      };
-    }, [prevScrollPos]);
-
-      
-        
-
-
     
   return (
-    <nav ref={ref} className=" fixed  backdrop-blur-lg w-full z-50  transition duration-500 p-4
+    <nav className=" fixed  backdrop-blur-lg w-full z-50  transition duration-500 p-4
     ">
 
       <div className="container mx-auto">

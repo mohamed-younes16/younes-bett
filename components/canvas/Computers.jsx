@@ -11,7 +11,8 @@ const ComputersCanvas = () => {
   return (
 
     <div className="max-w-[600px]">
-      <Player hover  loop={false} src={phone}    />
+
+{ window  && document.documentElement &&   <Player hover  loop={false} src={phone}    />}
 
     </div>
 

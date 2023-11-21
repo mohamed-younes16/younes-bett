@@ -82,6 +82,15 @@ html {
 
 }
 
+.animate-bg  {
+
+  background-image: linear-gradient(90deg , #eeff00 0%,#00ff33 31%, #ffaa00 66%);
+  
+  animation: bgChange 10s infinite linear alternate;
+  filter: hue-rotate(var(--rotate));
+
+}
+
 /* .hero {
 
   background-size: cover;

@@ -21,12 +21,12 @@ const Hero = () => {
           <p className="text-[2.2rem]  max-sm:text-[1.3rem] max-md:text-[1.5rem] max-w-xl">
             I develop Web-Apps Using React and Tailwindcss , NextJS ,Zustand,
             MongoDB , NodeJS{" "}
-            <span className="bg-violet-800 inline-block h-4 w-4 rounded-full" />
+            <span className="bg-violet- animate-bg inline-block h-4 w-4 rounded-full" />
           </p>
         </div>
       </div>
 
-      <ComputersCanvas />
+      {/* <ComputersCanvas /> */}
       <div className="absolute z-40 bg-transparent max-md:-bottom-28 -bottom-14 w-full justify-center flex translate-x-[-50%] left-1/2">
         <div
           className="h-24 w-12 

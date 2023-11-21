@@ -8,13 +8,16 @@ import { Toaster } from 'sonner'
 
 export default function Home() {
  const ref = useRef(null)
-useEffect(() => {
-const handleMouse = (e)=>{
-ref.current.style.backgroundImage=`radial-gradient(400px at  ${e.clientX}px  ${e.clientY}px ,rgb(63 63 69 / 0%) , black 89% )`
-}
-window.addEventListener("pointermove",handleMouse)
 
-}, [])
+// useEffect(() => {
+// const handleMouse = (e)=>{
+// ref.current.style.backgroundImage=`radial-gradient(400px at  ${e.clientX}px  ${e.clientY}px ,rgb(63 63 69 / 0%) , black 89% )`
+// }
+// if(window) {
+//   window?.addEventListener("pointermove",handleMouse)
+// } 
+
+// }, [])
 
 
  

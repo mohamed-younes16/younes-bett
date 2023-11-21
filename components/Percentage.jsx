@@ -7,8 +7,8 @@ const Percentage = () => {
 useEffect(() => {
 
     const getper =  ()=>{
-        const h = document.documentElement.scrollHeight - window.innerHeight
-        const dcrol = window.scrollY
+        const h = document?.documentElement.scrollHeight - window.innerHeight
+        const dcrol = window?.scrollY
           setfull(((dcrol / h ) * 100).toFixed() )
         ref.current.style.width = `${((dcrol / h ) * 100).toFixed() }%`
 

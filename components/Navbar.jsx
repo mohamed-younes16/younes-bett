@@ -24,10 +24,15 @@ const Navbar = () => {
             <li key={e.id} className= {`text-violet-200 hover:text-white 
              hover:scale-105 active:scale-90 transition  cursor-pointer active:text-white `} >
               
-              <p  onClick={()=>document.querySelector(e.id)
+              <p  onClick={()=>document?.querySelector(e.id)
                 .scrollIntoView({behavior:"smooth"})}
                 
-                >{e.title}</p></li> )}
+                >{e.title}</p>
+                
+                </li> )
+                
+                
+                }
             
           </ul>
 

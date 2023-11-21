@@ -15,7 +15,7 @@ const Experience = () => {
 
       setTimeout(() => {
          
-       link != "#contact"  ?window.open(link,"_blank"): document.getElementById("contact").scrollIntoView({behavior:"smooth"})
+       link != "#contact"  ?window?.open(link,"_blank"): document?.getElementById("contact").scrollIntoView({behavior:"smooth"})
       }, 500);
   }
   return (<>

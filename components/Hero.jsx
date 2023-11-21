@@ -1,5 +1,5 @@
 "use client";
-import { ComputersCanvas } from "./canvas";
+
 import { motion } from "framer-motion";
 
 const Hero = () => {
@@ -26,7 +26,6 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* <ComputersCanvas /> */}
       <div className="absolute z-40 bg-transparent max-md:-bottom-28 -bottom-14 w-full justify-center flex translate-x-[-50%] left-1/2">
         <div
           className="h-24 w-12 

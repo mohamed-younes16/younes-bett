@@ -6,7 +6,7 @@ const Hero = () => {
   return (
     <section
       className=" relative flex flex-col items-center 
-      w-full max-md:min-h-[70vh] min-h-screen"
+      w-full min-h-[70vh] "
     >
       <div className="max-w-7xl px-6 flex gap-6 inset-0 mt-[120px] max-md:top-28   items-start  mx-auto">
         <div className="flex flex-col items-center">
@@ -20,7 +20,7 @@ const Hero = () => {
           </h1>
           <p className="text-[2.2rem]  max-sm:text-[1.3rem] max-md:text-[1.5rem] max-w-xl">
             I develop Web-Apps Using React and Tailwindcss , NextJS ,Zustand,
-            MongoDB , NodeJS{" "}
+            MongoDB , NodeJS
             <span className="bg-violet- animate-bg inline-block h-4 w-4 rounded-full" />
           </p>
         </div>

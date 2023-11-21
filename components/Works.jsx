@@ -41,7 +41,7 @@ const Works = () => {
               key={e.title}
               textClassName="p-[1px] w-full transition-all duration-700
        rounded-[2rem] !bg-[linear-gradient(180deg,#1c1c1c,#060606_65.62%)] 
-       border-neutral-500 border-[2px] hover:shadow-card hover:scale-105"
+       border-neutral-500 border-[2px] max-md:max-w-[78dvw] hover:shadow-card hover:scale-105"
               iconStyle={{ backgroundColor: "#151030" }}
               icon={
                 <motion.div
@@ -68,12 +68,12 @@ const Works = () => {
                 initial="hidden"
                 whileInView="show"
                 viewport={{ once: true, amount: 0.8 }}
-                className=" p-5"
+                className=" p-5 max-md:p-2"
               >
                 <div className=" overflow-hidden">
-                  <h3 className="font-bold text-3xl ">{e.title}</h3>
+                  <h3 className="font-bold text-3xl max-md:text-2xl ">{e.title}</h3>
                   <div className="text-secondary">{e.company_name}</div>
-                  <ul className=" list-disc px-7">
+                  <ul className=" list-disc pl-7">
                     {e.points.map((e) => (
                       <li className="my-2" key={e}>
                         {e}

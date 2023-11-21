@@ -66,83 +66,79 @@ const Experience = () => {
                   : "!h-0 !w-0 overflow-hidden"
               } `}
             >
-              <Tilt>
-                <div
-                  onClick={(ev) =>
-                    handlego(
-                      ev,
-                      e.source_code_link ? e.source_code_link : "#contact"
-                    )
-                  }
-                  target={e.source_code_link ? "_blank" : "_self"}
-                  rel="noreferrer"
-                >
-                  <motion.div
-                    variants={fadeIn("left", "spring", 0.1 * i, 2)}
-                    initial="hidden"
-                    whileInView={"show"}
-                    viewport={{ once: true, amount: 0.4 }}
-                    className="w-full  z-30 sm:w-[360px] max-w-[360px]
+              <div
+                onClick={(ev) =>
+                  handlego(
+                    ev,
+                    e.source_code_link ? e.source_code_link : "#contact"
+                  )
+                }
+                target={e.source_code_link ? "_blank" : "_self"}
+                rel="noreferrer"
+              >
+                <motion.div
+                  variants={fadeIn("left", "spring", 0.1 * i, 2)}
+                  initial="hidden"
+                  whileInView={"show"}
+                  viewport={{ once: true, amount: 0.4 }}
+                  className="w-full  z-30 sm:w-[360px] max-w-[360px]
                          relative transition-all  
-                        p-[2px] rounded-3xl shadow-card"
-                  >
-                    {e.next ? (
-                      <Image
-                        src={next}
-                        alt="next image"
-                        className=" h-[60px] w-[60px] absolute 
-                                                      object-cover text-4xl text-gray bottom-6 animate-pulse z-0 right-6 "
-                      />
-                    ) : (
-                      <Image
-                        src={reactjs}
-                        alt="next image"
-                        className=" h-[60px] w-[60px] absolute 
-                            object-cover text-4xl text-gray bottom-6 animate-pulse z-0 right-6 "
-                      />
-                    )}
-                    <div
-                      className={`  w-fit outline-4 outline outline-neutral-700 
-                       bg-[url(/blob${Math.ceil(
-                        Math.random() * 4
-                      )}.svg)] 
+                        p-[2px] rounded-2xl hover:shadow-card"
+                >
+                  {e.next ? (
+                    <Image
+                      src={next}
+                      alt="next image"
+                      className=" h-[60px] w-[60px] z-50 absolute 
+                                                      object-cover text-4xl text-gray bottom-6 animate-pulse  right-6 "
+                    />
+                  ) : (
+                    <Image
+                      src={reactjs}
+                      alt="react image"
+                      className=" h-[60px] w-[60px] absolute 
+                            object-cover text-4xl text-gray bottom-6 animate-pulse z-50 right-6 "
+                    />
+                  )}
+                  <div
+                    className={`  w-fit outline-4 outline outline-neutral-700 
+                       bg-[url(/blob${Math.ceil(Math.random() * 4)}.svg)] 
                       transition-all duration-500
-                  border-neutral-500 border-[2px] shadow-card  z-10 p-5 min-h-[560px]  bg-cover rounded-3xl`}
-                    >
-                      <div className="rounded-3xl h-[230px] relative overflow-hidden">
-                        <div
-                          style={{ animationDuration: "3s" }}
-                          className="black-gradient animate-spin duration-1000 absolute right-2 top-2 p-2 rounded-full "
-                        >
-                          <Image
-                            src={github}
-                            className="h-10 w-10"
-                            height={50}
-                            width={50}
-                            alt=""
-                          />
-                        </div>
-
+                  border-neutral-500 border-[2px] hover:shadow-card hover:scale-105  z-10 p-5 min-h-[560px]  bg-cover rounded-3xl`}
+                  >
+                    <div className="rounded-3xl h-[230px] relative overflow-hidden">
+                      <div
+                        style={{ animationDuration: "3s" }}
+                        className="black-gradient animate-spin duration-1000 absolute right-2 top-2 p-2 rounded-full "
+                      >
                         <Image
-                          src={e.image}
-                          alt={e.name}
-                          className=" object-cover  w-full h-full rounded-3xl"
-                          style={{ objectPosition: e.dir }}
+                          src={github}
+                          className="h-10 w-10"
+                          height={50}
+                          width={50}
+                          alt=""
                         />
                       </div>
-                      <p className="font-bold my-4">{e.name}</p>
-                      <p className="text-secondary">{e.description}</p>
-                      <div className="flex flex-wrap gap-3 relative z-20  mt-6">
-                        {e.tags.map((e) => (
-                          <p key={e.name} className={`${e.color} text-red-80`}>
-                            #{e.name}
-                          </p>
-                        ))}
-                      </div>
+
+                      <Image
+                        src={e.image}
+                        alt={e.name}
+                        className=" object-cover  w-full h-full rounded-3xl"
+                        style={{ objectPosition: e.dir }}
+                      />
                     </div>
-                  </motion.div>
-                </div>
-              </Tilt>
+                    <p className="font-bold my-4">{e.name}</p>
+                    <p className="text-secondary">{e.description}</p>
+                    <div className="flex flex-wrap gap-3 relative z-20  mt-6">
+                      {e.tags.map((e) => (
+                        <p key={e.name} className={`${e.color} text-red-80`}>
+                          #{e.name}
+                        </p>
+                      ))}
+                    </div>
+                  </div>
+                </motion.div>
+              </div>
             </div>
           ))}
         </div>

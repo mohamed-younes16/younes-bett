@@ -17,7 +17,6 @@
   initial-value: 0%;
   inherits: false;
 } 
-
 html.lenis {
   height: auto;
 }
@@ -30,6 +29,15 @@ html.lenis {
   overscroll-behavior: contain;
 }
 
+::-webkit-scrollbar {
+  width: 15px
+}
+::-webkit-scrollbar-thumb {
+ background-color: white;
+ border-radius: 15px;
+}
+::-webkit-scrollbar-track{
+  width: 15px;}
 .lenis.lenis-stopped {
   overflow: hidden;
 }
@@ -37,7 +45,6 @@ html.lenis {
 .lenis.lenis-scrolling iframe {
   pointer-events: none;
 }
-
 a {
   color:  inherit;
   text-decoration: none;
@@ -90,22 +97,6 @@ html {
   filter: hue-rotate(var(--rotate));
 
 }
-
-/* .hero {
-
-  background-size: cover;
-  background-image:  conic-gradient(from var(--rotate) ,#000000 156deg 117deg, #979797 163deg,
-   #000000 170deg 337deg, #979797 344deg, #000000 352deg );;
-   background-image:radial-gradient(366px at  200px  150px ,rgb(63 63 69 / 45%) , black 89% )
-
-} */
-
-@media ( 900px <= width ) {
-.hero {
-    animation: bgChange 40s infinite linear   ;
-}
-}
-
 
 
  @keyframes bgChange {

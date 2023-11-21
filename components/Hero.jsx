@@ -1,12 +1,10 @@
 "use client";
 
-import { motion } from "framer-motion";
-
 const Hero = () => {
   return (
     <section
-      className=" relative flex flex-col items-center 
-      w-full min-h-[70vh] "
+      className=" p-0 relative flex flex-col items-center 
+      w-full  "
     >
       <div className="max-w-7xl px-6 flex gap-6 inset-0 mt-[120px] max-md:top-28   items-start  mx-auto">
         <div className="flex flex-col items-center">
@@ -21,12 +19,12 @@ const Hero = () => {
           <p className="text-[2.2rem]  max-sm:text-[1.3rem] max-md:text-[1.5rem] max-w-xl">
             I develop Web-Apps Using React and Tailwindcss , NextJS ,Zustand,
             MongoDB , NodeJS
-            <span className="bg-violet- animate-bg inline-block h-4 w-4 rounded-full" />
+            <span className="ml-2 animate-bg inline-block h-4 w-4 rounded-full" />
           </p>
         </div>
       </div>
 
-      <div className="absolute z-40 bg-transparent max-md:-bottom-28 -bottom-14 w-full justify-center flex translate-x-[-50%] left-1/2">
+      {/* <div className="absolute z-40 bg-transparent max-md:-bottom-28 -bottom-14 w-full justify-center flex translate-x-[-50%] left-1/2">
         <div
           className="h-24 w-12 
         max-md:h-20 max-md:w-10
@@ -44,7 +42,7 @@ const Hero = () => {
             ></motion.div>
           </a>
         </div>
-      </div>
+      </div> */}
     </section>
   );
 };

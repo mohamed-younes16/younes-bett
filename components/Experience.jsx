@@ -55,12 +55,12 @@ const Experience = () => {
           it. It reflects my ability to solve problems, work with different
           technologies.
         </motion.p>
-        <div className="flex gap-10  mt-10 justify-center flex-wrap">
+        <div className="flex gap-10  mt-10 max-md:mt-6 justify-center flex-wrap">
           {projects.map((e, i) => (
             <div
               data-speed={(0.1 * i).toFixed(1)}
               key={i}
-              className={`active:scale-95 transition-all  duration-700 relative ${
+              className={`active:scale-95  lg:hover:scale-105 transition-all  duration-700 relative ${
                 i < limit
                   ? " h-[560px] w-[350px] "
                   : "!h-0 !w-0 overflow-hidden"
@@ -104,9 +104,9 @@ const Experience = () => {
                     className={`  w-fit outline-4 outline outline-neutral-700 
                        bg-[url(/blob${Math.ceil(Math.random() * 4)}.svg)] 
                       transition-all duration-500
-                  border-neutral-500 border-[2px] hover:shadow-card hover:scale-105  z-10 p-5 min-h-[560px]  bg-cover rounded-3xl`}
+                  border-neutral-500 border-[2px] hover:shadow-card  z-10 p-5 min-h-[560px]  bg-cover rounded-2xl`}
                   >
-                    <div className="rounded-3xl h-[230px] relative overflow-hidden">
+                    <div className="rounded-2xl h-[230px] relative overflow-hidden">
                       <div
                         style={{ animationDuration: "3s" }}
                         className="black-gradient animate-spin duration-1000 absolute right-2 top-2 p-2 rounded-full "

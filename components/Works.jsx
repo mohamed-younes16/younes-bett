@@ -41,7 +41,7 @@ const Works = () => {
               key={e.title}
               textClassName="p-[1px] w-full transition-all duration-700
        rounded-[2rem] !bg-[linear-gradient(180deg,#1c1c1c,#060606_65.62%)] 
-       border-neutral-500 border-[2px] max-md:max-w-[78dvw] hover:shadow-card hover:scale-105"
+       border-neutral-500 border-[2px] max-md:max-w-[78dvw] lg:hover:scale-105"
               iconStyle={{ backgroundColor: "#151030" }}
               icon={
                 <motion.div

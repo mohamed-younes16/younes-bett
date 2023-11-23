@@ -10,7 +10,7 @@ import { useState } from "react";
 import { useEffect } from "react";
 const About = () => {
   const [windowobj, setWindow] = useState(null);
-  
+
   useEffect(() => {
     setWindow(true);
   }, []);
@@ -20,7 +20,7 @@ const About = () => {
 
 
   return (
-    <div className="px-6 max-w-7xl mx-auto mt-40" id="about">
+    <div className="px-6 max-w-7xl mx-auto mt-10" id="about">
       <p className=" text-secondary text-lg">INTRODUCTION</p>
 
       <h2 className="font-bold text-5xl my-6">Overview</h2>
@@ -51,15 +51,15 @@ const About = () => {
                 opacity: 0,
                 x: `${
                   window &&
-                  window?.innerWidth > 600 &&
+                  window?.innerWidth > 700 &&
                   (i < services.length / 2 ? "200px" : "-200px")
                 }`,
               }}
               whileInView={{
                 translateY: `${
                   window &&
-                  window?.innerWidth > 600 &&
-                  (i % 2 == 0 ? "60px" : "-60px")
+                  window?.innerWidth > 700 &&
+                  (i % 2 == 0 ? "-40%" : "40%")
                 } `,
                 opacity: 1,
                 x: "0px",

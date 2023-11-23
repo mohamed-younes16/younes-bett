@@ -1,7 +1,7 @@
 export const textVariant = (delay) => {
     return {
       hidden: {
-        y: -20,
+        y: -10,
         opacity: 0,
       },
       show: {
@@ -9,7 +9,7 @@ export const textVariant = (delay) => {
         opacity: 1,
         transition: {
           type: "spring",
-          duration: 1.25,
+          duration: 2.25,
           delay: delay,
         },
       },
@@ -19,7 +19,7 @@ export const textVariant = (delay) => {
   export const fadeIn = (direction, type, delay, duration) => {
     return {
       hidden: {
-      translateX: direction === "left" ? 30 : direction === "right" ? -30 : 0,
+      translateX: direction === "left" ? 20: direction === "right" ? -20 : 0,
        opacity:0
        
       },

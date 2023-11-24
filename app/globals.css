@@ -19,6 +19,7 @@
 } 
 html.lenis {
   height: auto;
+  
 }
 
 .lenis.lenis-smooth {
@@ -50,6 +51,7 @@ a {
   text-decoration: none;
 }
 html {
+  scroll-behavior: smooth;
   overflow-x:  hidden;
 }
 

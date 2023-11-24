@@ -1,5 +1,5 @@
 "use client";
-import { Tilt } from "react-tilt";
+
 import { projects } from "../constants";
 import { motion } from "framer-motion";
 import { fadeIn, textVariant } from "../utils/motion";

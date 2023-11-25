@@ -47,7 +47,7 @@ const Works = () => {
                 <motion.div
                   initial={{ rotateZ: "0turn" }}
                   whileInView={{ rotate: "1turn" }}
-                  transition={{ duration: 2.5, type: "spring" }}
+                  transition={{ duration: 2,}}
                   className=" flex h-full  w-full hover:rotate-180 justify-center items-center"
                 >
                   <Image

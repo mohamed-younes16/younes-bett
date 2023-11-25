@@ -11,7 +11,6 @@ const AniGrid = () => {
     
     const ref = useRef(null)
     const isBigDevice= useMediaQuery({minWidth:700})
-    console.log(isBigDevice)
    
    useEffect(() => { 
    

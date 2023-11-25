@@ -19,7 +19,7 @@ export const textVariant = (delay) => {
   export const fadeIn = (direction, type, delay, duration) => {
     return {
       hidden: {
-      translateX: direction === "left" ? 20: direction === "right" ? -20 : 0,
+      translateX: direction === "left" ? 10: direction === "right" ? -10 : 0,
        opacity:0
        
       },
@@ -59,8 +59,8 @@ export const textVariant = (delay) => {
   export const slideIn = (direction, type, delay, duration) => {
     return {
       hidden: {
-        x: direction === "left" ? "-20%" : direction === "right" ? "20%" : 0,
-        y: direction === "up" ? "20%" : direction === "down" ? "20%" : 0,
+        x: direction === "left" ? "-10%" : direction === "right" ? "10%" : 0,
+        y: direction === "up" ? "10%" : direction === "down" ? "10%" : 0,
       },
       show: {
         x: 0,
@@ -77,7 +77,7 @@ export const textVariant = (delay) => {
   
   export const staggerContainer = (staggerChildren, delayChildren) => {
     return {
-      hidden: {opacity:0,translate:"0 -5rem"},
+      hidden: {opacity:0,translate:"0 -2rem"},
       show: {
         opacity:1,
         translate:"0",

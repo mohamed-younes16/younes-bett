@@ -1,7 +1,5 @@
 "use client";
-
 import anime from "animejs/lib/anime.es.js";
-import Image from "next/image";
 import { useEffect } from "react";
 
 const Splash = ({ setFisinshed }) => {
@@ -41,15 +39,7 @@ const Splash = ({ setFisinshed }) => {
         easing: "easeInOutQuart",
         opacity: 1,
       })
-      .add({
-        targets: "#logo",
-        delay: 0,
-        duration: 700,
-        easing: "easeInOutQuart",
-        opacity: 0,
-        scale: 0.1,
-        translateY: window && -window.innerHeight * 2,
-      });
+      
   };
 
   useEffect(() => {
@@ -58,7 +48,7 @@ const Splash = ({ setFisinshed }) => {
 
   return (
     <div className=" flex justify-center items-center  fixed inset-0 ">
-      {/* <Image src={"/icon.svg"} height={200} id='my' width={200} alt='f'/> */}
+
 
       <svg
         id="logo"

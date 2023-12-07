@@ -1,14 +1,14 @@
 "use client";
 import anime from "animejs/lib/anime.es.js";
-import { usePlausible } from "next-plausible";
+
 import { useEffect } from "react";
 
 const Splash = ({ setFisinshed }) => {
-  const plausible = usePlausible();
+
   const animation = () => {
     const lodaer = anime.timeline({
       complete: () =>{
-        plausible("finished animation")
+    
          setFisinshed()},
     });
     lodaer

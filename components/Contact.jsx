@@ -7,7 +7,7 @@ import { fadeIn, slideIn } from "../utils/motion";
 import CanvasEarth from "./canvas/Earth";
 import emailjs from "@emailjs/browser";
 import { useState } from "react";
-import { usePlausible } from "next-plausible";
+
 import {
   GithubIcon,
   InstagramIcon,
@@ -20,7 +20,7 @@ import { toast } from "sonner";
 
 const Contact = () => {
   const [loading, setloading] = useState(false);
-  const plausible = usePlausible();
+
   const [submitted, setsubbmitted] = useState(false);
 
   const [inputs, setinputs] = useState({
@@ -78,10 +78,7 @@ const Contact = () => {
   };
 
   return (
-    <div    onClick={() => {
-      console.log("hiii");
-      plausible("form click")
-    }} className="max-w-7xl mx-auto  flex-1 mt-20  ">
+    <div  className="max-w-7xl mx-auto  flex-1 mt-20  ">
       <div className="flex px-3 relative max-lg:flex-col-reverse  max-lg:items-center ">
         <motion.div
           variants={slideIn("left", "tween", 0.2, 1)}

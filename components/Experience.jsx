@@ -9,7 +9,7 @@ import { useState } from "react";
 import Image from "next/image";
 
 const Experience = () => {
-  const [limit, setlimit] = useState(5);
+  const [limit, setlimit] = useState(3);
   const handlego = (e, link) => {
     setTimeout(() => {
       link != "#contact"

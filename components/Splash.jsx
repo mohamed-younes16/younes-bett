@@ -23,7 +23,7 @@ const Splash = ({ setFisinshed }) => {
       .add({
         targets: "#logo",
         delay: 0,
-        duration: 600,
+        duration: 500,
         easing: "easeInOutQuart",
 
         scale: 1.1,
@@ -32,13 +32,13 @@ const Splash = ({ setFisinshed }) => {
       .add({
         targets: "#logo text",
         delay: 0,
-        duration: 200,
+        duration: 300,
         easing: "easeInOutQuart",
         opacity: 1,
       })
       .add({
         targets: "#logo #B",
-        duration: 900,
+        duration: 700,
         easing: "easeInOutQuart",
         opacity: 1,
       });

@@ -1,26 +1,29 @@
 "use client";
 import anime from "animejs/lib/anime.es.js";
+import { usePlausible } from "next-plausible";
 import { useEffect } from "react";
 
 const Splash = ({ setFisinshed }) => {
+  const plausible = usePlausible();
   const animation = () => {
-    console.log(window && -window.innerHeight * 2);
     const lodaer = anime.timeline({
-      complete: () => setFisinshed(),
+      complete: () =>{
+        plausible("finished animation")
+         setFisinshed()},
     });
     lodaer
       .add({
         opacity: 1,
         targets: "#logo path",
         delay: 0,
-        duration: 1000,
+        duration: 800,
         easing: "easeInOutQuart",
         strokeDashoffset: [anime.setDashoffset, 0],
       })
       .add({
         targets: "#logo",
         delay: 0,
-        duration: 700,
+        duration: 600,
         easing: "easeInOutQuart",
 
         scale: 1.1,
@@ -29,17 +32,16 @@ const Splash = ({ setFisinshed }) => {
       .add({
         targets: "#logo text",
         delay: 0,
-        duration: 300,
+        duration: 200,
         easing: "easeInOutQuart",
         opacity: 1,
       })
       .add({
         targets: "#logo #B",
-        duration: 1100,
+        duration: 900,
         easing: "easeInOutQuart",
         opacity: 1,
-      })
-      
+      });
   };
 
   useEffect(() => {
@@ -48,8 +50,6 @@ const Splash = ({ setFisinshed }) => {
 
   return (
     <div className=" flex justify-center items-center  fixed inset-0 ">
-
-
       <svg
         id="logo"
         className=" relative  h-32  text-white w-32 "
@@ -57,7 +57,7 @@ const Splash = ({ setFisinshed }) => {
         viewBox="0 0 100 100"
       >
         <title>Loader Logo</title>
-       
+
         <g>
           <g id="B" transform="translate(11.000000, 5.000000)"></g>
           <path

@@ -5,8 +5,6 @@ import {
   web,
   javascript,
   typescript,
-  html,
-  css,
   reactjs,
   tailwind,
   git,
@@ -21,124 +19,121 @@ import {
   node,
   twitt,
   hoo,
+  prisma,
+  discord,
 } from "@/assets";
 
 import next from "@/assets/next.png";
 
 export const navLinks = [
   {
-    id: "#about",
-    title: "About",
+    id: `#about`,
+    title: `About`,
   },
   {
-    id: "#work",
-    title: "Work",
+    id: `#work`,
+    title: `Work`,
   },
   {
-    id: "#contact",
-    title: "Contact",
+    id: `#contact`,
+    title: `Contact`,
   },
 ];
 
 const services = [
   {
-    title: "Web Developer",
+    title: `Web Developer`,
     icon: web,
   },
   {
-    title: "ReactJS Developer",
+    title: `ReactJS Developer`,
     icon: mobile,
   },
   {
-    title: "Backend Developer",
+    title: `Backend Developer`,
     icon: backend,
   },
   {
-    title: "NextJS Developper",
+    title: `NextJS Developper`,
     icon: creator,
   },
 ];
 
 const technologies = [
   {
-    name: "TypeScript",
+    name: `TypeScript`,
     icon: typescript,
   },
   {
-    name: "React JS",
+    name: `React JS`,
     icon: reactjs,
   },
-
   {
-    name: "Tailwind CSS",
+    name: `Tailwind CSS`,
     icon: tailwind,
   },
   {
-    name: "nextJs",
+    name: `nextJs`,
     icon: next,
   },
   {
-    name: "mongo",
+    name: `mongo`,
     icon: mongodb,
   },
   {
-    name: "nodejs",
+    name: `prisma`,
+    icon: prisma,
+  },
+  {
+    name: `nodejs`,
     icon: node,
   },
   {
-    name: "JavaScript",
+    name: `JavaScript`,
     icon: javascript,
   },
   {
-    name: "git",
+    name: `git`,
     icon: git,
-  },
-  {
-    name: "HTML 5",
-    icon: html,
-  },
-  {
-    name: "CSS 3",
-    icon: css,
   },
 ];
 
 const experiences = [
   {
-    title: "React.js Developer",
-    company_name: "",
+    title: `React.js Developer`,
+    company_name: ``,
     icon: reactjs,
-    iconBg: "#383E56",
-    date: "March 2020 - April 2021",
+    iconBg: `#383E56`,
+    date: `March 2020 - April 2021`,
     points: [
-      "Passionate React.js developer based in Algeria, dedicated to creating responsive and dynamic web applications.",
-      " Proficient in building user-friendly interfaces to create high-quality products.",
-      "Developed and maintained web applications using React.js examples right below .",
+      `Passionate React.js developer based in Algeria, dedicated to creating responsive and dynamic web applications.`,
+      ` Proficient in building user-friendly interfaces to create high-quality products.`,
+      `Developed and maintained web applications using React.js examples right below .`,
     ],
   },
   {
-    title: "NextJs Developer",
-    company_name: "",
+    title: `NextJs Developer`,
+    company_name: ``,
     icon: next,
-    iconBg: "#E6DEDD",
-    date: "Jan 2021 - Feb 2022",
+    iconBg: `#E6DEDD`,
+    date: `Jan 2021 - Feb 2022`,
     points: [
-      "Developing and maintaining web applications using NEXT.js ",
-      "Leveraged Next.js SSR and SSG to create high-performance web applications.",
-      "implement nextJs Features to serve fast web apps",
+      `Developing and maintaining web applications using NEXT.js `,
+      `Leveraged Next.js SSR and SSG to create high-performance web applications.`,
+      `implement nextJs Features to serve fast web apps`,
     ],
   },
   {
-    title: "Node-Js & MongoDB",
-    company_name: "",
+    title: `Node-Js & MongoDB & Prisma`,
+    company_name: ``,
     icon: node,
-    iconBg: "#383E56",
-    date: "Jan 2022 - Jan 2023",
+    iconBg: `#383E56`,
+    date: `Jan 2022 - Jan 2023`,
     points: [
-      "designing, implementing, and optimizing databases for web applications. ",
-      "Implemented custom middleware for request and response processing.",
-      "Utilized Mongoose for schema validation and modeling and Storing Data.",
-      "Developed server-side applications using Express.js.",
+      `designing, implementing,  databases for web applications. `,
+      `Implemented custom middleware for request and response processing in express.`,
+      `Utilized Mongoose ORM   & Prisma ORM for modeling and Storing Data.`,
+      `Developed server-side applications using Express.js.`,
     ],
   },
 ];
@@ -146,263 +141,294 @@ const experiences = [
 const testimonials = [
   {
     testimonial:
-      "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
-    name: "Mark christopher ",
-    designation: "CFO",
-    company: "Acme Co",
-    image: "https://randomuser.me/api/portraits/men/4.jpg",
+      `I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.`,
+    name: `Mark christopher `,
+    designation: `CFO`,
+    company: `Acme Co`,
+    image: `https://randomuser.me/api/portraits/men/4.jpg`,
   },
   {
     testimonial:
-      "I've never met a web developer who truly cares about their clients' success like Rick does.",
-    name: "Chris Brown",
-    designation: "COO",
-    company: "DEF Corp",
-    image: "https://randomuser.me/api/portraits/men/5.jpg",
+      `I've never met a web developer who truly cares about their clients' success like Rick does.`,
+    name: `Chris Brown`,
+    designation: `COO`,
+    company: `DEF Corp`,
+    image: `https://randomuser.me/api/portraits/men/5.jpg`,
   },
   {
     testimonial:
-      "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
-    name: "mike Wang",
-    designation: "CTO",
-    company: "456 Enterprises",
-    image: "https://randomuser.me/api/portraits/men/9.jpg",
+      `After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!`,
+    name: `mike Wang`,
+    designation: `CTO`,
+    company: `456 Enterprises`,
+    image: `https://randomuser.me/api/portraits/men/9.jpg`,
   },
 ];
 
 const projects = [
   // {
-  //   name: "My Portfolio",
+  //   name: `My Portfolio`,
   //   description:
-  //     "The App you're using now ,it's  Web-app that Show my Work for you and give you the ability to contact me Right Below :) ",
+  //     `The App you're using now ,it's  Web-app that Show my Work for you and give you the ability to contact me Right Below :) `,
   //   tags: [
   //     {
-  //       name: "react",
-  //       color: "blue-text-gradient",
+  //       name: `react`,
+  //       color: `blue-text-gradient`,
   //     },
   //     {
-  //       name: "mongodb",
-  //       color: "green-text-gradient",
+  //       name: `mongodb`,
+  //       color: `green-text-gradient`,
   //     },
   //     {
-  //       name: "tailwind",
-  //       color: "pink-text-gradient",
+  //       name: `tailwind`,
+  //       color: `pink-text-gradient`,
   //     },
   //   ],
-  //   dir:"center",
+  //   dir:`center`,
   //   image: three,
 
   // },
   {
     next: true,
-    name: "Full Stack Dribble clone ",
+    name: `Full Stack Dribble clone `,
     description:
-      "App inspired from dribble with full stack features => ( CRUD , authentication ) that provide  for users share their projects pictures and source repos and livesites with some description with dark theme version  ",
+      `App inspired from dribble with full stack features => ( CRUD , authentication )
+       that provide  for users share their projects pictures and source repos and livesites 
+       with some description with dark theme toggle  `,
     tags: [
       {
-        name: "react",
-        color: "blue-text-gradient",
+        name: `react`,
+        color: `blue-text-gradient`,
       },
 
       {
-        name: "NextJs",
-        color: "text-red-800",
+        name: `NextJs`,
+        color: `text-red-800`,
       },
       {
-        name: "Tailwind",
-        color: "text-cyan-400",
+        name: `Tailwind`,
+        color: `text-cyan-400`,
       },
       {
-        name: "Headless UI",
-        color: "text-green-600",
+        name: `Headless UI`,
+        color: `text-green-600`,
       },
     ],
-    dir: "left",
+    dir: `left`,
     image: felixbble,
-    source_code_link: "https://felixbble-theme.vercel.app/",
+    source_code_link: `https://felixbble-theme.vercel.app/`,
   },
+  {
+    next: true,
+    name: `Full Stack Discord clone `,
+    description: `discord clone withfull stack features that provide  for users to message in servers and send  pictures documents file with 
+      dark theme toggle with a postgresql db  `,
+    tags: [
+      {
+        name: `react`,
+        color: `blue-text-gradient`,
+      },
 
+      {
+        name: `NextJs`,
+        color: `text-red-800`,
+      },
+      {
+        name: `Tailwind`,
+        color: `text-cyan-400`,
+      },
+      {
+        name: `Prisma`,
+        color: `text-green-600`,
+      },
+    ],
+    dir: `center`,
+    image: discord,
+    source_code_link: `https://felixbble-theme.vercel.app/`,
+  },
   {
     next: false,
-    name: "Hoo-bank theme",
-    description: "App showcase with stylish design with smooth scrolling by lenis ",
+    name: `Hoo-bank theme`,
+    description:
+      `App showcase with stylish design with smooth scrolling by lenis `,
     tags: [
       {
-        name: "react",
-        color: "blue-text-gradient",
+        name: `react`,
+        color: `blue-text-gradient`,
       },
       {
-        name: "Tailwind",
-        color: "text-cyan-400",
-      },   {
-        name: "Lenis",
-        color: "text-red-400",
+        name: `Tailwind`,
+        color: `text-cyan-400`,
+      },
+      {
+        name: `Lenis`,
+        color: `text-red-400`,
       },
     ],
-    dir: "center",
+    dir: `center`,
     image: hoo,
-    source_code_link: "https://mohamed-younes16.github.io/hoo-bank",
+    source_code_link: `https://mohamed-younes16.github.io/hoo-bank`,
   },
 
   {
     next: true,
-    name: "E-Commerce App",
+    name: `E-Commerce App`,
     description:
-      "Web application that can present your E-Commerce Products and can be easly modified by using sanity studio interface and can accept real orders if needed  by using stripe ",
+      `Web application that can present your E-Commerce Products and can be easly modified by using sanity studio interface and can accept real orders if needed  by using stripe `,
     tags: [
       {
-        name: "react",
-        color: "blue-text-gradient",
+        name: `react`,
+        color: `blue-text-gradient`,
       },
 
       {
-        name: "Sanity",
-        color: "text-pink-200",
+        name: `Sanity`,
+        color: `text-pink-200`,
       },
       {
-        name: "Stripe",
-        color: "text-violet-200",
+        name: `Stripe`,
+        color: `text-violet-200`,
       },
     ],
-    dir: "right",
+    dir: `right`,
     image: phanox,
-    source_code_link: "https://phanox-theme.vercel.app/",
+    source_code_link: `https://phanox-theme.vercel.app/`,
   },
   {
     next: true,
-    name: "threads-clone CRUD app ",
+    name: `threads-clone CRUD app `,
     description:
-      "Full-Stack  CRUD App built with nextJs and MongoDB and Clerk with Authentication support and profile cutomization and users search and infinit scroll   ",
+      `Full-Stack  CRUD App built with nextJs and MongoDB and Clerk with Authentication support and profile cutomization and users search and infinit scroll   `,
     tags: [
       {
-        name: "Clerk",
-        color: "blue-text-gradient",
+        name: `Clerk`,
+        color: `blue-text-gradient`,
       },
 
       {
-        name: "NextJs",
-        color: "text-red-800",
+        name: `NextJs`,
+        color: `text-red-800`,
       },
       {
-        name: "MongoDB",
-        color: "text-cyan-400",
+        name: `MongoDB`,
+        color: `text-cyan-400`,
       },
     ],
-    dir: "left",
+    dir: `left`,
     image: twitt,
-    source_code_link: "https://twitt-clone-pi.vercel.app/",
+    source_code_link: `https://twitt-clone-pi.vercel.app/`,
   },
   {
     next: true,
-    name: "Weather API  App",
+    name: `Weather API  App`,
     description:
-      "Web application that can present for You  live data and Charts of the weather in any place you want with a clean ui ",
+      `Web application that can present for You  live data and Charts of the weather in any place you want with a clean ui `,
     tags: [
       {
-        name: "react",
-        color: "blue-text-gradient",
+        name: `react`,
+        color: `blue-text-gradient`,
       },
 
       {
-        name: "NextJs",
-        color: "text-red-800",
+        name: `NextJs`,
+        color: `text-red-800`,
       },
       {
-        name: "Trmeor",
-        color: "text-cyan-400",
+        name: `Trmeor`,
+        color: `text-cyan-400`,
       },
     ],
-    dir: "right",
+    dir: `right`,
     image: weather,
-    source_code_link: "https://weather-git-main-mohamed-younes16.vercel.app/",
+    source_code_link: `https://weather-git-main-mohamed-younes16.vercel.app/`,
   },
   {
-    name: "Dashboard App",
+    name: `Dashboard App`,
     description:
-      "Web application that can present for You  live data and Charts if you Bind it with an api or any sort of data and it provide  many tools using syncFusion Libray Components with togglable Theme Presets ",
+      `Web application that can present for You  live data and Charts if you Bind it with an api or any sort of data and it provide  many tools using syncFusion Libray Components with togglable Theme Presets `,
     tags: [
       {
-        name: "react",
-        color: "blue-text-gradient",
+        name: `react`,
+        color: `blue-text-gradient`,
       },
 
       {
-        name: "Sanity",
-        color: "text-pink-200",
+        name: `Sanity`,
+        color: `text-pink-200`,
       },
       {
-        name: "Stripe",
-        color: "text-violet-200",
+        name: `Stripe`,
+        color: `text-violet-200`,
       },
     ],
-    dir: "right",
+    dir: `right`,
     image: dashboard,
-    source_code_link: "https://dashboard-sample-ten.vercel.app/",
+    source_code_link: `https://dashboard-sample-ten.vercel.app/`,
   },
   {
     next: true,
-    name: "Car Rent  App",
+    name: `Car Rent  App`,
     description:
-      "Web application that usese cars api to show cars based on search parameters and filters based on server side rendering ",
+      `Web application that usese cars api to show cars based on search parameters and filters based on server side rendering `,
     tags: [
       {
-        name: "react",
-        color: "blue-text-gradient",
+        name: `react`,
+        color: `blue-text-gradient`,
       },
 
       {
-        name: "Headless-Ui",
-        color: "text-cyan-400",
+        name: `Headless-Ui`,
+        color: `text-cyan-400`,
       },
       {
-        name: "NextJs",
-        color: "text-red-600",
+        name: `NextJs`,
+        color: `text-red-600`,
       },
     ],
-    dir: "right",
+    dir: `right`,
     image: carrent,
-    source_code_link: "https://car-rent-theme-mohamed-younes16.vercel.app/",
+    source_code_link: `https://car-rent-theme-mohamed-younes16.vercel.app/`,
   },
   {
-    name: "GYM Presentation",
+    name: `GYM Presentation`,
     description:
-      "Web application that can present your gym or commerce to People and share your work",
+      `Web application that can present your gym or commerce to People and share your work`,
     tags: [
       {
-        name: "react",
-        color: "blue-text-gradient",
+        name: `react`,
+        color: `blue-text-gradient`,
       },
       {
-        name: "restapi",
-        color: "green-text-gradient",
+        name: `restapi`,
+        color: `green-text-gradient`,
       },
       {
-        name: "Framer Motion",
-        color: "pink-text-gradient",
+        name: `Framer Motion`,
+        color: `pink-text-gradient`,
       },
     ],
-    dir: "right",
+    dir: `right`,
     image: gymApp,
-    source_code_link: "https://mohamed-younes16.github.io/gym-app/",
+    source_code_link: `https://mohamed-younes16.github.io/gym-app/`,
   },
 
   {
-    name: "nike theme template",
+    name: `nike theme template`,
     description:
-      "A design theme for nike shoes selling shop with stylish items presentation.",
+      `A design theme for nike shoes selling shop with stylish items presentation.`,
     tags: [
       {
-        name: "React",
-        color: "blue-text-gradient",
+        name: `React`,
+        color: `blue-text-gradient`,
       },
       {
-        name: "Tailwind",
-        color: "green-text-gradient",
+        name: `Tailwind`,
+        color: `green-text-gradient`,
       },
     ],
     image: nikeapp,
-    dir: "center",
-    source_code_link: "https://mohamed-younes16.github.io/nike-theme",
+    dir: `center`,
+    source_code_link: `https://mohamed-younes16.github.io/nike-theme`,
   },
 ];
 

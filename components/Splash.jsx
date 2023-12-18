@@ -49,7 +49,7 @@ const Splash = ({ setFisinshed }) => {
   }, []);
 
   return (
-    <div className=" flex justify-center items-center  fixed inset-0 ">
+    <div onClick={()=>setFisinshed()} className=" flex  justify-center items-center  fixed inset-0 ">
       <svg
         id="logo"
         className=" relative  h-32  text-white w-32 "

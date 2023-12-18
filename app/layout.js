@@ -14,7 +14,7 @@ export default function RootLayout({ children }) {
   return (
     <html suppressHydrationWarning className=" bg-black" lang="en">
       <body className={inter.className}>
-        {children} <Analytics /><SpeedInsights /> 
+        {children} <Analytics  debug={false} /><SpeedInsights debug={false}  /> 
       </body>
     </html>
   );

@@ -140,24 +140,21 @@ const experiences = [
 
 const testimonials = [
   {
-    testimonial:
-      `I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.`,
+    testimonial: `I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.`,
     name: `Mark christopher `,
     designation: `CFO`,
     company: `Acme Co`,
     image: `https://randomuser.me/api/portraits/men/4.jpg`,
   },
   {
-    testimonial:
-      `I've never met a web developer who truly cares about their clients' success like Rick does.`,
+    testimonial: `I've never met a web developer who truly cares about their clients' success like Rick does.`,
     name: `Chris Brown`,
     designation: `COO`,
     company: `DEF Corp`,
     image: `https://randomuser.me/api/portraits/men/5.jpg`,
   },
   {
-    testimonial:
-      `After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!`,
+    testimonial: `After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!`,
     name: `mike Wang`,
     designation: `CTO`,
     company: `456 Enterprises`,
@@ -191,8 +188,7 @@ const projects = [
   {
     next: true,
     name: `Full Stack Dribble clone `,
-    description:
-      `App inspired from dribble with full stack features => ( CRUD , authentication )
+    description: `App inspired from dribble with full stack features => ( CRUD , authentication )
        that provide  for users share their projects pictures and source repos and livesites 
        with some description with dark theme toggle  `,
     tags: [
@@ -221,7 +217,7 @@ const projects = [
   {
     next: true,
     name: `Full Stack Discord clone `,
-    description: `discord clone withfull stack features that provide  for users to message in servers and send  pictures documents file with 
+    description: `discord clone with full stack features that provide  for users to message in servers and send  pictures documents file with 
       dark theme toggle with a postgresql db  `,
     tags: [
       {
@@ -244,13 +240,12 @@ const projects = [
     ],
     dir: `center`,
     image: discord,
-    source_code_link: `https://felixbble-theme.vercel.app/`,
+    source_code_link: `https://discord-clone-pro.up.railway.app`,
   },
   {
     next: false,
     name: `Hoo-bank theme`,
-    description:
-      `App showcase with stylish design with smooth scrolling by lenis `,
+    description: `App showcase with stylish design with smooth scrolling by lenis `,
     tags: [
       {
         name: `react`,
@@ -273,8 +268,7 @@ const projects = [
   {
     next: true,
     name: `E-Commerce App`,
-    description:
-      `Web application that can present your E-Commerce Products and can be easly modified by using sanity studio interface and can accept real orders if needed  by using stripe `,
+    description: `Web application that can present your E-Commerce Products and can be easly modified by using sanity studio interface and can accept real orders if needed  by using stripe `,
     tags: [
       {
         name: `react`,
@@ -297,8 +291,7 @@ const projects = [
   {
     next: true,
     name: `threads-clone CRUD app `,
-    description:
-      `Full-Stack  CRUD App built with nextJs and MongoDB and Clerk with Authentication support and profile cutomization and users search and infinit scroll   `,
+    description: `Full-Stack  CRUD App built with nextJs and MongoDB and Clerk with Authentication support and profile cutomization and users search and infinit scroll   `,
     tags: [
       {
         name: `Clerk`,
@@ -321,8 +314,7 @@ const projects = [
   {
     next: true,
     name: `Weather API  App`,
-    description:
-      `Web application that can present for You  live data and Charts of the weather in any place you want with a clean ui `,
+    description: `Web application that can present for You  live data and Charts of the weather in any place you want with a clean ui `,
     tags: [
       {
         name: `react`,
@@ -344,8 +336,7 @@ const projects = [
   },
   {
     name: `Dashboard App`,
-    description:
-      `Web application that can present for You  live data and Charts if you Bind it with an api or any sort of data and it provide  many tools using syncFusion Libray Components with togglable Theme Presets `,
+    description: `Web application that can present for You  live data and Charts if you Bind it with an api or any sort of data and it provide  many tools using syncFusion Libray Components with togglable Theme Presets `,
     tags: [
       {
         name: `react`,
@@ -368,8 +359,7 @@ const projects = [
   {
     next: true,
     name: `Car Rent  App`,
-    description:
-      `Web application that usese cars api to show cars based on search parameters and filters based on server side rendering `,
+    description: `Web application that usese cars api to show cars based on search parameters and filters based on server side rendering `,
     tags: [
       {
         name: `react`,
@@ -391,8 +381,7 @@ const projects = [
   },
   {
     name: `GYM Presentation`,
-    description:
-      `Web application that can present your gym or commerce to People and share your work`,
+    description: `Web application that can present your gym or commerce to People and share your work`,
     tags: [
       {
         name: `react`,
@@ -414,8 +403,7 @@ const projects = [
 
   {
     name: `nike theme template`,
-    description:
-      `A design theme for nike shoes selling shop with stylish items presentation.`,
+    description: `A design theme for nike shoes selling shop with stylish items presentation.`,
     tags: [
       {
         name: `React`,

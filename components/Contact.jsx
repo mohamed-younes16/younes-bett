@@ -4,19 +4,12 @@ import { Sectionwrapper } from "../hoc/sectionwrapper";
 
 import { motion } from "framer-motion";
 import { fadeIn, slideIn } from "../utils/motion";
-import CanvasEarth from "./canvas/Earth";
+
 import emailjs from "@emailjs/browser";
 import { useState } from "react";
 
-import {
-  GithubIcon,
-  InstagramIcon,
-  LinkedinIcon,
-  TwitterIcon,
-  Youtube,
-  YoutubeIcon,
-} from "lucide-react";
 import { toast } from "sonner";
+import { Loader2 } from "lucide-react";
 
 const Contact = () => {
   const [loading, setloading] = useState(false);
@@ -78,8 +71,9 @@ const Contact = () => {
   };
 
   return (
-    <div  className="max-w-7xl mx-auto  flex-1 mt-20  ">
-      <div className="flex px-3 relative max-lg:flex-col-reverse  max-lg:items-center ">
+    <div  className="max-w-7xl mx-auto  flex-1  ">
+
+      <div className="flex justify-center px-3 mt-6 relative max-lg:flex-col-reverse  max-lg:items-center ">
         <motion.div
           variants={slideIn("left", "tween", 0.2, 1)}
           initial="hidden"
@@ -173,13 +167,13 @@ const Contact = () => {
                     className={` ${
                       !loading && submitted ? "bg-green-600 animate-pulse" : ""
                     } 
-                              my-6 rounded-xl p-4 hover:text-white 
+                              my-6 rounded-xl p-3 hover:text-white 
                                hover:bg-black-200 transition duration-300 border-2 
                                bg-secondary text-black w-fit mx-auto `}
                     type="submit"
                   >
                     {loading && !submitted
-                      ? "sending...."
+                      ? <Loader2 className="animate-spin"/>
                       : submitted
                       ? ""
                       : "send"}
@@ -188,63 +182,20 @@ const Contact = () => {
                 )}
               </motion.div>
             </form>
-            {/* <div className=" transition-all rounded-full  w-44 h-44  ">
-            
-            <div className="flex w-full  h-1/2  ">
-
-          <div  className="p-4 flex justify-end  rounded-tl-full  bg-slate-900  hover:-translate-y-2 
-            shadow-lg
-            hover:shadow-slate-300 rounded-br-lg overflow-hidden
-           hover:-translate-x-2 items-end flex-1 transition-all hover:bg-violet-700 hover:scale-110  w-14  text-3xl"> 
-           <InstagramIcon  className=" h-10  w-10  "/> 
-           </div>
-            
-           <div  className="p-4  flex-1  flex justify-start items-end transition-all
-            hover:-translate-y-2 
-            shadow-lg
-            hover:shadow-slate-300
-            hover:translate-x-2 
-             rounded-tr-full  bg-slate-900  hover:bg-cyan-500 hover:scale-110  w-14  text-3xl"> 
-           <TwitterIcon  className=" h-10  w-10  "/> 
-           </div>
-            </div>
-           
-             
-            <div className="flex w-full h-1/2   ">
-
-                <div  className="p-4 flex justify-end items-start  flex-1 transition-all  rounded-bl-full
-                 hover:translate-y-2 
-                 shadow-lg
-                 hover:shadow-slate-300
-                 hover:-translate-x-2 
-                 bg-slate-900   hover:bg-blue-700 hover:scale-110  w-14  text-3xl"> 
-                <LinkedinIcon  className=" h-10  w-10  "/> 
-                </div>
-
-                <div  className="p-4  flex justify-start items-start   rounded-br-full  flex-1  transition-all
-                 hover:translate-y-2   shadow-lg
-                 hover:shadow-slate-300
-
-                 hover:translate-x-2 
-                  bg-slate-900   hover:bg-red-600 hover:scale-110  w-14  text-3xl"> 
-                <YoutubeIcon  className=" h-10  w-10  "/> 
-                </div>
-
-            </div>
-            
-          </div> */}
+         
           </div>
         </motion.div>
 
-        <motion.div
+        {/* <motion.div
           variants={slideIn("right", "tween", 0.2, 1.5)}
           initial="hidden"
           whileInView={"show"}
           viewport={{ once: true }}
           className=" lg:flex-1 h-[350px] md:h-auto "
         >
-          <CanvasEarth />
-        </motion.div>
+
+    
+        </motion.div> */}
       </div>
     </div>
   );

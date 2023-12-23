@@ -10,31 +10,22 @@ import "react-vertical-timeline-component/style.min.css";
 import Image from "next/image";
 const Works = () => {
   return (
-    <div  className=" mt-16">
-      <div  className="text-center">
-        <p
-          
-          className="text-secondary max-md:text-base text-lg"
-        >
+    <div className=" mt-16">
+      <div className="text-center">
+        <p className="text-secondary max-md:text-base text-lg">
           {" "}
-          WHAT I HAVE LEARNED SO FAR .
+          WHAT I HAVE DONE SO FAR .
         </p>
         <div className=" flex gap-2 justify-center items-end ">
-          <p
-            
-            className="text-5xl max-md:text-4xl font-bold"
-          >
+          <p className="text-5xl max-md:text-3xl font-bold">
             {" "}
             TECH Experiences
           </p>
-          <div
-            
-            className=" h-4 w-4 animate-bg   rounded-full"
-          />
+          <div className=" h-4 w-4 animate-bg   rounded-full" />
         </div>
       </div>
 
-      <div  className="mt-10">
+      <div className="mt-10">
         <VerticalTimeline animate={false}>
           {experiences.map((e, i) => (
             <VerticalTimelineElement
@@ -47,7 +38,7 @@ const Works = () => {
                 <motion.div
                   initial={{ rotateZ: "0turn" }}
                   whileInView={{ rotate: "1turn" }}
-                  transition={{ duration: 2,}}
+                  transition={{ duration: 2 }}
                   className=" flex h-full  w-full hover:rotate-180 justify-center items-center"
                 >
                   <Image
@@ -71,11 +62,13 @@ const Works = () => {
                 className=" p-5 max-md:p-2"
               >
                 <div className=" overflow-hidden">
-                  <h3 className="font-bold text-3xl max-md:text-2xl ">{e.title}</h3>
+                  <h3 className="font-bold text-3xl max-md:text-xl ">
+                    {e.title}
+                  </h3>
                   <div className="text-secondary">{e.company_name}</div>
-                  <ul className=" list-disc pl-7">
+                  <ul className="list-disc pl-7">
                     {e.points.map((e) => (
-                      <li className="my-2" key={e}>
+                      <li className="my-2 max-md:text-sm" key={e}>
                         {e}
                       </li>
                     ))}

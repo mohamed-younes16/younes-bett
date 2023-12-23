@@ -15,7 +15,8 @@ const AniGrid = () => {
    useEffect(() => { 
    
    const handleMouse = (e)=>{
-   ref.current.style.backgroundImage=`radial-gradient(400px at  ${e.clientX}px  ${e.clientY}px ,rgb(63 63 69 / 0%) 50% , rgb(0 0 0 / 80%) 100% )`
+  if( ref.current !== null) {
+    ref.current.style.backgroundImage = `radial-gradient(400px at  ${e.clientX}px  ${e.clientY}px ,rgb(63 63 69 / 0%) 50% , rgb(0 0 0 / 80%) 100% )`}
    }
    
    if(window && isBigDevice) {

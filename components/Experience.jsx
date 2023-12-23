@@ -21,7 +21,7 @@ const Experience = () => {
   };
   return (
     <>
-      <div className="max-w-7xl mx-auto mt-24 px-6" id="work">
+      <div className="max-w-7xl px-4 mx-auto mt-12" id="work">
         <motion.p
           variants={textVariant()}
           initial="hidden"
@@ -55,34 +55,27 @@ const Experience = () => {
           it. It reflects my ability to solve problems, work with different
           technologies.
         </motion.p>
-        <div className="flex gap-10  mt-10 max-md:mt-6 justify-center flex-wrap">
+        <div className="flex gap-8  mt-10 max-md:mt-6 justify-center flex-wrap">
           {projects.map((e, i) => (
             <div
+       
               data-speed={(0.1 * i).toFixed(1)}
               key={i}
-              className={`active:scale-95  lg:hover:scale-105 transition-all  duration-700 relative ${
+              className={`active:scale-95  lg:hover:scale-105 transition-all   
+                max-lg:w-[285px] max-sm:w-[260px] duration-700 relative ${
                 i < limit
-                  ? " h-[560px] w-[350px] "
-                  : "!h-0 !w-0 overflow-hidden"
+                  ? " lg:h-[550px] w-[340px]  "
+                  : "hidden"
               } `}
             >
-              <div
-                onClick={(ev) =>
-                  handlego(
-                    ev,
-                    e.source_code_link ? e.source_code_link : "#contact"
-                  )
-                }
-                target={e.source_code_link ? "_blank" : "_self"}
-                rel="noreferrer"
-              >
+        
                 <motion.div
                   variants={fadeIn("left", "spring", 0.1 * i, 2)}
                   initial="hidden"
                   whileInView={"show"}
                   viewport={{ once: true, amount: 0.4 }}
-                  className="w-full  z-30 sm:w-[360px] max-w-[360px]
-                         relative transition-all  
+                  className="w-full h-full z-30  relative transition-all 
+               
                         p-[2px] rounded-2xl hover:shadow-card"
                 >
                   {e.next ? (
@@ -101,17 +94,24 @@ const Experience = () => {
                     />
                   )}
                   <div
-                    className={`  w-fit outline-4 outline outline-neutral-700 
+                    className={` h-full w-fit outline-4 outline outline-neutral-700 
                        bg-[url(/blob${Math.ceil(Math.random() * 4)}.svg)] 
                       transition-all duration-500
-                  border-neutral-500 border-[2px] hover:shadow-card  z-10 p-5 min-h-[560px]  bg-cover rounded-2xl`}
+                  border-neutral-500 border-[2px] hover:shadow-card  z-10 p-3  bg-cover rounded-2xl`}
                   >
-                    <div className="rounded-2xl h-[230px] relative overflow-hidden">
+                    <div className="rounded-2xl h-[220px] relative overflow-hidden">
                       <div
+                           onClick={(ev) =>
+                            handlego(
+                              ev,
+                              e.source_code_link ? e.source_code_link : "#contact"
+                            )
+                          }
                         style={{ animationDuration: "3s" }}
-                        className="black-gradient animate-spin duration-1000 absolute right-2 top-2 p-2 rounded-full "
+                        className="black-gradient animate-spin duration-1000 absolute right-2 top-2 p-1 rounded-full "
                       >
                         <Image
+
                           src={github}
                           className="h-10 w-10"
                           height={50}
@@ -126,9 +126,13 @@ const Experience = () => {
                         className=" object-cover  w-full h-full rounded-3xl"
                         style={{ objectPosition: e.dir }}
                       />
+                    </div>  
+                    <p className="font-semibold my-4">{e.name}</p>
+                    <div className="max-h-[150px] overflow-auto">
+                    
+                    <p className="text-secondary max-lg:text-[14px] ">{e.description}</p>
                     </div>
-                    <p className="font-bold my-4">{e.name}</p>
-                    <p className="text-secondary">{e.description}</p>
+                  
                     <div className="flex flex-wrap gap-3 relative z-20  mt-6">
                       {e.tags.map((e) => (
                         <p key={e.name} className={`${e.color} text-red-80`}>
@@ -139,14 +143,15 @@ const Experience = () => {
                   </div>
                 </motion.div>
               </div>
-            </div>
+          
           ))}
         </div>
       </div>
-      <div className="flex justify-center mt-7 relative ">
+    {projects.length >= limit &&   <div className="flex justify-center mt-7 relative ">
+
         {projects.length >= limit && (
           <>
-            {" "}
+            
             <div
               className="inset-x-0   max-lg:w-[100dvw] top-0 -translate-y-2/3  flex justify-center
             py-56  bottom-36 z-50 bg-[#060606] rounded-xl blur-2xl   pointer-events-none  
@@ -170,7 +175,7 @@ const Experience = () => {
             </button>
           </>
         )}
-      </div>
+      </div>}
     </>
   );
 };

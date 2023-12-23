@@ -17,14 +17,13 @@ const About = () => {
 
   if (!windowobj) return <></>;
 
-
-
   return (
-    <div className="px-6 max-w-7xl mx-auto mt-10" id="about">
-      <p className=" text-secondary text-lg">INTRODUCTION</p>
+    <div className="px-6 py-0 max-w-7xl mx-auto mt-10" id="about">
+      <p className=" text-secondary max-sm:text-base text-lg">INTRODUCTION</p>
 
-      <h2 className="font-bold text-5xl my-6">Overview</h2>
+      <h2 className="font-bold text-5xl max-md:text-3xl my-6">Overview</h2>
       <motion.p
+    
         variants={fadeIn("", "", 0.2, 1)}
         initial="hidden"
         whileInView={"show"}
@@ -38,29 +37,25 @@ const About = () => {
         Let's work together to bring your ideas to life!
       </motion.p>
 
-      <div className="flex flex-wrap  gap-11 mt-36  justify-center">
+      <div className="flex flex-wrap  gap-11 mt-12  justify-center">
         {services.map((e, i) => (
-          <div
+          <motion.div
+        
             key={i}
-            className="  transition-all  hover:scale-105 active:scale-90 "
+            className="cursor-pointer "
           >
             <motion.div
-              drag
+      
               initial={{
-                translateY: ` 20px `,
+              
                 opacity: 0,
                 x: `${
                   window &&
-                  window?.innerWidth > 700 &&
-                  (i < services.length / 2 ? "200px" : "-200px")
+                  (i < services.length / 2 ? "100px" : "-100px")
                 }`,
               }}
               whileInView={{
-                translateY: `${
-                  window &&
-                  window?.innerWidth > 700 &&
-                  (i % 2 == 0 ? "-40%" : "40%")
-                } `,
+              
                 opacity: 1,
                 x: "0px",
               }}
@@ -72,18 +67,22 @@ const About = () => {
               }}
               viewport={{ once: true }}
               className=" p-[1px] w-fit outline-4 outline outline-neutral-700 
-                   rounded-[2rem] bg-[linear-gradient(180deg,#1c1c1c,#060606_65.62%)] border-neutral-500 border-[2px] shadow-card"
+                   rounded-2xl bg-[linear-gradient(180deg,#1c1c1c,#060606_65.62%)]
+                    border-neutral-500 border-[2px] shadow-card"
             >
-              <div className=" rounded-[2rem] flex justify-center items-center flex-col gap-8 p-12 w-[15rem] h-[280px]  text-center">
+              <div
+                className="rounded-[2rem] flex justify-center items-center 
+              flex-col gap-8 p-6 w-[190px] max-md:!w-[130px] max-md:h-[160px]  h-[220px]  text-center"
+              >
                 <Image
                   src={e.icon}
                   alt={`${e.title} icon`}
-                  className=" w-16 h-16"
+                  className=" w-12 h-12"
                 />
-                <p className="font-bold text-xl">{e.title}</p>
+                <p className="font-semibold text-xl max-md:text-base">{e.title}</p>
               </div>
             </motion.div>
-          </div>
+          </motion.div>
         ))}
       </div>
     </div>

@@ -25,7 +25,7 @@ const Percentage = () => {
     <div
       ref={ref}
       className={`h-1  ${isfull == 100 ? "" : ""} 
-     transition-all duration-500 
+    duration-150 
        bg-[linear-gradient(90deg,white,gray)]  
         bg-fixed dark:bg-primary-blue-100 fixed z-[999] rounded-full top-0 left-0`}
     />

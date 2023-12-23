@@ -62,7 +62,7 @@ const Experience = () => {
               data-speed={(0.1 * i).toFixed(1)}
               key={i}
               className={`active:scale-95  lg:hover:scale-105 transition-all   
-                max-lg:w-[285px] max-sm:w-[280px] duration-700 relative ${
+                max-lg:w-[285px] max-sm:w-[300px] duration-700 relative ${
                 i < limit
                   ? " lg:h-[550px] w-[340px]  "
                   : "hidden"

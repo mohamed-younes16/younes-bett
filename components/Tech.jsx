@@ -7,7 +7,7 @@ const Tech = () => {
   const isSmallDevice = useMediaQuery("only screen and (max-width : 768px)");
 
   return (
-    <div className=" max-w-5xl mx-auto tech ">
+    <div className=" max-w-5xl px-3 mx-auto tech ">
       <div className="flex gap-12 max-md:gap-20 justify-center flex-wrap">
         {technologies.slice(0, isSmallDevice?7:technologies.length).map((e) => {
           return (

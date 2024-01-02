@@ -22,6 +22,7 @@ export default function Home() {
 
   return (
     <main className=" bg-[url(/grid.svg)] relative  min-h-screen  ">
+
       <Toaster richColors position="top-center" />
 
       {loading ? (

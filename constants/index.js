@@ -21,6 +21,7 @@ import {
   hoo,
   prisma,
   discord,
+  ecomm,
 } from "@/assets";
 
 import next from "@/assets/next.png";
@@ -185,6 +186,33 @@ const projects = [
   //   image: three,
 
   // },
+  {
+    next: true,
+    name: `Full Stack Ecommer + Admin`,
+    description: `Fully Ecommerce app with payements included with Stripe and an admin with full control  to manage all Products which are fetched and displayed in the store side `,
+    tags: [
+      {
+        name: `react`,
+        color: `blue-text-gradient`,
+      },
+
+      {
+        name: `NextJs 14`,
+        color: `text-red-800`,
+      },
+      {
+        name: `Tailwind`,
+        color: `text-cyan-400`,
+      },
+      {
+        name: `ShadCn UI`,
+        color: `text-green-600`,
+      },
+    ],
+    dir: `left`,
+    image: ecomm,
+    source_code_link: `https://ecommerce-front-teal.vercel.app`,
+  },
   {
     next: true,
     name: `Full Stack Dribble clone `,

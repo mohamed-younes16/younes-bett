@@ -25,14 +25,15 @@ const Works = () => {
         </div>
       </div>
 
-      <div className="mt-10">
+      <div className="mt-10 px-4">
         <VerticalTimeline animate={false}>
           {experiences.map((e, i) => (
             <VerticalTimelineElement
               key={e.title}
-              textClassName="p-[1px] w-full transition-all duration-700
+              textClassName="p-[1px]  transition-all duration-150
        rounded-[2rem] !bg-[linear-gradient(180deg,#1c1c1c,#060606_65.62%)] 
-       border-neutral-500 border-[2px] max-md:max-w-[78dvw] lg:hover:scale-105"
+       border-neutral-500 border-[2px] 
+       max-md:max-w-[78dvw] lg:hover:translate-x-2 lg:hover:-translate-y-2"
               iconStyle={{ backgroundColor: "#151030" }}
               icon={
                 <motion.div

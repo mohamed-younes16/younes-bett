@@ -23,9 +23,11 @@ import felixbble from "./felixbble.avif";
 import twitt from "./twitt.png";
 import mongodb from "./tech/mongodb.png";
 import node from "./tech/nodejs.png";
-import discord from "./discord.png"
+import discord from "./discord.png";
 import prisma from "./prisma.svg";
+import ecomm from "./ecomm.png";
 export {
+  ecomm,
   prisma,
   hoo,
   node,
@@ -52,5 +54,5 @@ export {
   nikeapp,
   phanox,
   felixbble,
-  discord
+  discord,
 };

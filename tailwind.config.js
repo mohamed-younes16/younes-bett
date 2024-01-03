@@ -1,77 +1,31 @@
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  darkMode: ["class"],
   content: [
-    './pages/**/*.{js,jsx}',
-    './components/**/*.{js,jsx}',
-    './app/**/*.{js,jsx}',
-    './src/**/*.{js,jsx}',
+    './pages/**/*.{js,ts,jsx,tsx,mdx}',
+    './components/**/*.{js,ts,jsx,tsx,mdx}',
+    './app/**/*.{js,ts,jsx,tsx,mdx}',
+    
   ],
-  prefix: "",
   theme: {
-    container: {
-      center: true,
-      padding: "2rem",
-      screens: {
-        "2xl": "1400px",
-      },
-    },
     extend: {
       colors: {
-        border: "hsl(var(--border))",
-        input: "hsl(var(--input))",
-        ring: "hsl(var(--ring))",
-        background: "hsl(var(--background))",
-        foreground: "hsl(var(--foreground))",
-        primary: {
-          DEFAULT: "hsl(var(--primary))",
-          foreground: "hsl(var(--primary-foreground))",
-        },
-        secondary: {
-          DEFAULT: "hsl(var(--secondary))",
-          foreground: "hsl(var(--secondary-foreground))",
-        },
-        destructive: {
-          DEFAULT: "hsl(var(--destructive))",
-          foreground: "hsl(var(--destructive-foreground))",
-        },
-        muted: {
-          DEFAULT: "hsl(var(--muted))",
-          foreground: "hsl(var(--muted-foreground))",
-        },
-        accent: {
-          DEFAULT: "hsl(var(--accent))",
-          foreground: "hsl(var(--accent-foreground))",
-        },
-        popover: {
-          DEFAULT: "hsl(var(--popover))",
-          foreground: "hsl(var(--popover-foreground))",
-        },
-        card: {
-          DEFAULT: "hsl(var(--card))",
-          foreground: "hsl(var(--card-foreground))",
-        },
+        primary: "#050816",
+        secondary: "#aaa6c3",
+        tertiary: "#151030",
+        "black-100": "#100d25",
+        "black-200": "#090325",
+        "white-100": "#f3f3f3",
       },
-      borderRadius: {
-        lg: "var(--radius)",
-        md: "calc(var(--radius) - 2px)",
-        sm: "calc(var(--radius) - 4px)",
+    
+      screens: {
+        xs: "450px",
       },
-      keyframes: {
-        "accordion-down": {
-          from: { height: "0" },
-          to: { height: "var(--radix-accordion-content-height)" },
-        },
-        "accordion-up": {
-          from: { height: "var(--radix-accordion-content-height)" },
-          to: { height: "0" },
-        },
-      },
-      animation: {
-        "accordion-down": "accordion-down 0.2s ease-out",
-        "accordion-up": "accordion-up 0.2s ease-out",
+      backgroundImage: {
+        "hero-pattern": "url('/polygon-scatter-haikei.svg')",
       },
     },
+    
   },
   safelist: [
     'bg-red-500',
@@ -130,93 +84,6 @@ module.exports = {
     'bg-[url(/blob6.svg)]',
   ],
   
-  plugins: [require("tailwindcss-animate")],
+  plugins: [],
 }
-// /** @type {import('tailwindcss').Config} */
-// module.exports = {
-//   content: [
-//     './pages/**/*.{js,ts,jsx,tsx,mdx}',
-//     './components/**/*.{js,ts,jsx,tsx,mdx}',
-//     './app/**/*.{js,ts,jsx,tsx,mdx}',
-    
-//   ],
-//   theme: {
-//     extend: {
-//       colors: {
-//         primary: "#050816",
-//         secondary: "#aaa6c3",
-//         tertiary: "#151030",
-//         "black-100": "#100d25",
-//         "black-200": "#090325",
-//         "white-100": "#f3f3f3",
-//       },
-    
-//       screens: {
-//         xs: "450px",
-//       },
-//       backgroundImage: {
-//         "hero-pattern": "url('/polygon-scatter-haikei.svg')",
-//       },
-//     },
-    
-//   },
-//   safelist: [
-//     'bg-red-500',
-//     'text-3xl',
-//     'lg:text-4xl',
-//     'blue-text-gradient',
-//     'green-text-gradient',
-//     'pink-text-gradient',
-//     'text-red-800',
-//     'text-cyan-400',
-//     'text-green-600',
-//     'text-pink-200',
-//     'text-violet-200',
-//     'text-red-600',
-//     'green-pink-gradient',
-//     'active:scale-95',
-//     'transition-all',
-//     'shadow-card',
-//     'p-[2px]',
-//     'rounded-3xl',
-//     'animate-pulse',
-//     'text-4xl',
-//     'text-gray',
-//     'h-[60px]',
-//     'w-[60px]',
-//     'bg-cover',
-//     'rounded-full',
-//     'black-gradient',
-//     'animate-spin',
-//     'duration-1000',
-//     'h-10',
-//     'w-10',
-//     'h-12',
-//     'px-6',
-//     'bg-slate-700',
-//     'focus:ring-2',
-//     'focus:ring-slate-400',
-//     'text-base',
-//     'text-white',
-//     'font-semibold',
-//     'pointer-events-auto',
-//     'from-[#070637]',
-//     'inset-x-0',
-//     'max-lg:w-[100dvw]',
-//     'top-0',
-//     '-translate-y-2/3',
-//     'bg-gradient-to-t',
-//     'to-[#0303037a]',
-//     'pointer-events-none',
-//     'absolute',
-//     'bg-[url(/blob1.svg)]',
-//     'bg-[url(/blob2.svg)]',
-//     'bg-[url(/blob3.svg)]',
-//     'bg-[url(/blob4.svg)]',
-//     'bg-[url(/blob5.svg)]',
-//     'bg-[url(/blob6.svg)]',
-//   ],
-  
-//   plugins: [],
-// }
 

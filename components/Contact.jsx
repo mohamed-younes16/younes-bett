@@ -5,6 +5,7 @@ import { Sectionwrapper } from "../hoc/sectionwrapper";
 import { motion } from "framer-motion";
 import { fadeIn, slideIn } from "../utils/motion";
 
+
 import emailjs from "@emailjs/browser";
 import { useState } from "react";
 
@@ -71,9 +72,8 @@ const Contact = () => {
   };
 
   return (
-    <div  className="max-w-7xl mx-auto  flex-1  ">
-
-      <div className="flex justify-center px-3 mt-6 relative max-lg:flex-col-reverse  max-lg:items-center ">
+    <div className="max-w-7xl relative mx-auto  flex-1  ">
+      <div className="flex   justify-center px-3 mt-6 z-20 relative max-lg:flex-col-reverse  max-lg:items-center ">
         <motion.div
           variants={slideIn("left", "tween", 0.2, 1)}
           initial="hidden"
@@ -90,11 +90,7 @@ const Contact = () => {
               Contact
             </p>
 
-            <form
-              onSubmit={handlesubmit}
-
-              className=" flex flex-col"
-            >
+            <form onSubmit={handlesubmit} className=" flex flex-col">
               <motion.div
                 variants={fadeIn("right", "spring", 0.5, 0.75)}
                 initial="hidden"
@@ -131,8 +127,8 @@ const Contact = () => {
                   id="input-email"
                   className="px-3 my-2 py-4 text-xl placeholder-slate-400
                             valid:text-green-700 bg-black-100
-                            max-md:text-sm
-                            focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1 invalid:border-pink-500
+                            max-md:text-sm 
+                            focus:border-sky-500 focus:ring-sky-500 block w-full rounded-2xl overflow-hidden sm:text-sm focus:ring-1 invalid:border-pink-500
                             invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500 "
                   placeholder="you@example.com"
                 />
@@ -172,17 +168,18 @@ const Contact = () => {
                                bg-secondary text-black w-fit mx-auto `}
                     type="submit"
                   >
-                    {loading && !submitted
-                      ? <Loader2 className="animate-spin"/>
-                      : submitted
-                      ? ""
-                      : "send"}
+                    {loading && !submitted ? (
+                      <Loader2 className="animate-spin" />
+                    ) : submitted ? (
+                      ""
+                    ) : (
+                      "send"
+                    )}
                     {!loading && submitted && "submitted succefully"}{" "}
                   </button>
                 )}
               </motion.div>
             </form>
-         
           </div>
         </motion.div>
 
@@ -197,6 +194,7 @@ const Contact = () => {
     
         </motion.div> */}
       </div>
+    
     </div>
   );
 };

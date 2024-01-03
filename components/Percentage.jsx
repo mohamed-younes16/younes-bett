@@ -1,15 +1,13 @@
 "use client";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 
 const Percentage = () => {
-  const ref = useRef(null);
   const [isfull, setfull] = useState(0);
   useEffect(() => {
     const getper = () => {
       const h = document?.documentElement.scrollHeight - window.innerHeight;
       const dcrol = window?.scrollY;
       setfull(((dcrol / h) * 100).toFixed());
-      ref.current.style.width = `${((dcrol / h) * 100).toFixed()}%`;
     };
 
     window.addEventListener("scroll", getper);
@@ -17,18 +15,29 @@ const Percentage = () => {
 
     return () => {
       window.removeEventListener("scroll", getper);
-      window.removeEventListener("scroll", getper);
+      window.removeEventListener("resize", getper);
     };
   }, []);
 
   return (
-    <div
-      ref={ref}
-      className={`h-1  ${isfull == 100 ? "" : ""} 
+    <>
+      {" "}
+      <div
+        style={{ width: `${isfull}%` }}
+        className={`h-1  
     duration-150 
-       bg-[linear-gradient(90deg,white,gray)]  
-        bg-fixed dark:bg-primary-blue-100 fixed z-[999] rounded-full top-0 left-0`}
-    />
+       bg-[white]  
+        bg-fixed dark:bg-primary-blue-100 fixed z-[999] top-0 left-0`}
+      />
+      <div
+        style={{ left: `${(isfull || 0)}%` }}
+        className={`h-1
+        w-1 
+        shadow-[0px_0px_16px_13px_white] duration-150 
+       bg-[white]  
+        bg-fixed dark:bg-primary-blue-100 fixed z-[99] rounded-full -top-2 `}
+      />
+    </>
   );
 };
 

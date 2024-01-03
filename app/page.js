@@ -9,27 +9,21 @@ import {
   About,
   Navbar,
 } from "@/components";
-import AniGrid from "@/components/AniGrid";
+
 import Percentage from "@/components/Percentage";
-import Splash from "@/components/Splash";
-import { useState } from "react";
-import { GithubIcon, Instagram, TwitterIcon } from "lucide-react";
+import { GithubIcon, Instagram,  } from "lucide-react";
 import { Toaster } from "sonner";
 import Link from "next/link";
 
 export default function Home() {
-  const [loading, setLoading] = useState(true);
+
 
   return (
     <main className=" bg-[url(/grid.svg)] relative  min-h-screen  ">
 
       <Toaster richColors position="top-center" />
 
-      {loading ? (
-        <Splash setFisinshed={() => setLoading(false)} />
-      ) : (
-        <>
-          <AniGrid />
+     
           <div id="main" className=" main z-0 relative overflow-x-hidden pb-4">
             <div
               className="hero bg-cover transition-all  duration-100 bg-no-repeat bg-center 
@@ -127,8 +121,7 @@ export default function Home() {
               <Contact />
             </div>
           </div>
-        </>
-      )}
+  
     </main>
   );
 }

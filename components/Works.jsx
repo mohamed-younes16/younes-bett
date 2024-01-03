@@ -1,7 +1,4 @@
-import { motion } from "framer-motion";
 import { experiences } from "../constants";
-import { fadeIn } from "../utils/motion";
-
 import {
   VerticalTimeline,
   VerticalTimelineElement,
@@ -36,32 +33,16 @@ const Works = () => {
        max-md:max-w-[78dvw] lg:hover:translate-x-2 lg:hover:-translate-y-2"
               iconStyle={{ backgroundColor: "#151030" }}
               icon={
-                <motion.div
-                  initial={{ rotateZ: "0turn" }}
-                  whileInView={{ rotate: "1turn" }}
-                  transition={{ duration: 2 }}
-                  className=" flex h-full  w-full hover:rotate-180 justify-center items-center"
-                >
+                <div className=" flex h-full  w-full hover:rotate-180 justify-center items-center">
                   <Image
                     src={e.icon}
                     alt={e.title}
                     className=" w-[80%] h-[80%]  object-contain"
                   />
-                </motion.div>
+                </div>
               }
             >
-              <motion.div
-                variants={fadeIn(
-                  i % 2 == 0 ? "left" : "right",
-                  "spring",
-                  0.55 * i,
-                  4
-                )}
-                initial="hidden"
-                whileInView="show"
-                viewport={{ once: true, amount: 0.8 }}
-                className=" p-5 max-md:p-2"
-              >
+              <div className=" p-5 max-md:p-2">
                 <div className=" overflow-hidden">
                   <h3 className="font-bold text-3xl max-md:text-xl ">
                     {e.title}
@@ -75,7 +56,7 @@ const Works = () => {
                     ))}
                   </ul>
                 </div>
-              </motion.div>
+              </div>
             </VerticalTimelineElement>
           ))}
         </VerticalTimeline>

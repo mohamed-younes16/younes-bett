@@ -8,7 +8,10 @@ const Hero = () => {
       className=" p-0 relative flex flex-col items-center 
       w-full  "
     >
-        <Spline className="fixed -z-[1] inset-0" scene="https://prod.spline.design/QGTAg3FPRbtiP4Pz/scene.splinecode" />
+      <Spline
+        className="fixed -z-[1] inset-0"
+        scene="https://prod.spline.design/QGTAg3FPRbtiP4Pz/scene.splinecode"
+      />
       <div className="max-w-7xl px-6 flex gap-6 inset-0 mt-[120px] max-md:top-28   items-start  mx-auto">
         <div className="flex flex-col items-center">
           <div className="rounded-full bg-violet-500 h-5 w-5 mt-8"></div>
@@ -20,7 +23,8 @@ const Hero = () => {
             Hi , I &rsquo; m <span className="my-name ">Younes</span>
           </h1>
           <p className="text-[2.2rem]  max-sm:text-[1.3rem] max-md:text-[1.5rem] max-w-xl">
-            I develop Web-Apps Using ReactJS & Tailwindcss , NextJS ,Zustand, prisma, NodeJS
+            I develop Web-Apps Using ReactJS & Tailwindcss , NextJS ,Zustand,
+            prisma, NodeJS
             <span className="ml-2 animate-bg inline-block h-4 w-4 rounded-full" />
           </p>
         </div>

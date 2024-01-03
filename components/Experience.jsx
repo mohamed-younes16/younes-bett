@@ -94,6 +94,7 @@ const Experience = () => {
                     />
                   )}
                   <div
+                  suppressHydrationWarning
                     className={` h-full w-fit outline-4 outline outline-neutral-700 
                        bg-[url(/blob${Math.ceil(Math.random() * 4)}.svg)] 
                       transition-all duration-500

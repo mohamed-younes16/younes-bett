@@ -1,10 +1,14 @@
 "use client";
 import { technologies } from "@/constants";
 import { BallCanvas } from "./canvas";
-import { useMediaQuery } from "@uidotdev/usehooks";
+import { useState } from "react";
+import { useEffect } from "react";
 
 const Tech = () => {
-  const isSmallDevice = useMediaQuery("only screen and (max-width : 768px)");
+  const [isSmallDevice,setIssmall] = useState(true)
+  useEffect(() => {
+    window && window.innerWidth && setIssmall(window.innerWidth < 900)
+  }, [])
 
   return (
     <div className=" max-w-5xl px-3 mx-auto tech ">

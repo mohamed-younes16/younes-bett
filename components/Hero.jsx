@@ -9,7 +9,7 @@ const Hero = () => {
       w-full  "
     >
       <Spline
-        className="fixed -z-[1] inset-0"
+        className="fixed max-md:hidden -z-[1] inset-0"
         scene="https://prod.spline.design/QGTAg3FPRbtiP4Pz/scene.splinecode"
       />
       <div className="max-w-7xl px-6 flex gap-6 inset-0 mt-[120px] max-md:top-28   items-start  mx-auto">

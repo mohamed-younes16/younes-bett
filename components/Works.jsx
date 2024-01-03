@@ -33,7 +33,7 @@ const Works = () => {
        max-md:max-w-[78dvw] lg:hover:translate-x-2 lg:hover:-translate-y-2"
               iconStyle={{ backgroundColor: "#151030" }}
               icon={
-                <div className=" flex h-full  w-full hover:rotate-180 justify-center items-center">
+                <div className=" flex h-full  w-full justify-center items-center">
                   <Image
                     src={e.icon}
                     alt={e.title}

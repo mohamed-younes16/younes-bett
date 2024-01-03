@@ -13,7 +13,6 @@ import reactjs from "./tech/reactjs.png";
 import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";
 import hoo from "./hoo.avif";
-import three from "./three.avif";
 import nikeapp from "./nike.avif";
 import dashboard from "./dashboard.avif";
 import gymApp from "./gym.avif";
@@ -43,7 +42,6 @@ export {
   github,
   menu,
   close,
-  three,
   git,
   javascript,
   reactjs,

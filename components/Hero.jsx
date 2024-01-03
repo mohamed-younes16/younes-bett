@@ -39,7 +39,7 @@ const Hero = () => {
           </h1>
           <p className="text-[2.2rem]  max-sm:text-[1.3rem] max-md:text-[1.5rem] max-w-xl">
             I develop Web-Apps Using ReactJS & Tailwindcss , NextJS ,Zustand,
-            prisma, NodeJS
+            Prisma, NodeJS
             <span className="ml-2 animate-bg inline-block h-4 w-4 rounded-full" />
           </p>
         </div>

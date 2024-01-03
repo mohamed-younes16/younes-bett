@@ -1,9 +1,12 @@
-import { Inter } from "next/font/google";
+import { Poppins } from "next/font/google";
 import "./globals.css";
 import "tailwindcss/tailwind.css";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
-const inter = Inter({ subsets: ["latin"] });
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800", "900"],
+});
 import { Analytics } from "@vercel/analytics/react";
 export const metadata = {
   title: "Younes Bett",
@@ -12,9 +15,14 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html suppressHydrationWarning className=" bg-black" lang="en">
-      <body className={inter.className}>
-        {children} <Analytics  debug={false} /><SpeedInsights debug={false}  /> 
+    <html
+      suppressHydrationWarning
+      className={`${poppins.className} bg-black `}
+      lang="en"
+    >
+      <body>
+        {children} 
+       
       </body>
     </html>
   );

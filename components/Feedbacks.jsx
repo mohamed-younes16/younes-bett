@@ -2,7 +2,7 @@
 import {testimonials} from "../constants/index"
 import { motion } from "framer-motion"
 import { fadeIn } from "../utils/motion"
-import { Sectionwrapper } from "../hoc/sectionwrapper"
+
 import Image from "next/image"
 
 const Feedbacks = () => {
@@ -56,4 +56,4 @@ const Feedbacks = () => {
   )
 }
 
-export default  Sectionwrapper( Feedbacks,"id")
+export default   Feedbacks

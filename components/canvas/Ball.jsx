@@ -1,6 +1,6 @@
-"use client"
+"use client";
 
-import  { Suspense } from "react";
+import { Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
 import {
   Decal,
@@ -16,13 +16,13 @@ const Ball = (props) => {
   const [decal] = useTexture([props.imgUrl]);
 
   return (
-    <Float   >
+    <Float>
       <ambientLight intensity={0.25} />
       <directionalLight position={[0, 0, 0.05]} />
       <mesh castShadow receiveShadow scale={2.4}>
         <icosahedronGeometry args={[1, 1]} />
         <meshStandardMaterial
-          color='#fff4eb'
+          color="#fff4eb"
           polygonOffset
           polygonOffsetFactor={-3}
           flatShading
@@ -32,7 +32,7 @@ const Ball = (props) => {
           rotation={[2 * Math.PI, 0, 25]}
           scale={1}
           map={decal}
-          flatShading 
+          flatShading
         />
       </mesh>
     </Float>
@@ -40,25 +40,31 @@ const Ball = (props) => {
 };
 
 const BallCanvas = ({ icon }) => {
-
   return (
-    <div className="cursor-grab"
-    onMouseDown={(e)=>{e.target.classList.add("cursor-grabbing");e.target.classList.remove("cursor-grab")}}
-    onMouseUp={(e)=>{e.target.classList.remove("cursor-grabbing");e.target.classList.add("cursor-grab")}}>
-      <Canvas
-      frameloop='demand'
-      dpr={[1, 2]}
-      gl={{ preserveDrawingBuffer: true }}
+    <div
+      className="cursor-grab"
+      onMouseDown={(e) => {
+        e.target.classList.add("cursor-grabbing");
+        e.target.classList.remove("cursor-grab");
+      }}
+      onMouseUp={(e) => {
+        e.target.classList.remove("cursor-grabbing");
+        e.target.classList.add("cursor-grab");
+      }}
     >
-      <Suspense fallback={<CanvasLoader />}>
-        <OrbitControls enableZoom={false} />
-        <Ball imgUrl={icon.src} />
-      </Suspense>
+      <Canvas
+        frameloop="demand"
+        dpr={[1, 2]}
+        gl={{ preserveDrawingBuffer: true }}
+      >
+        <Suspense fallback={<CanvasLoader />}>
+          <OrbitControls enableZoom={false} />
+          <Ball imgUrl={icon.src} />
+        </Suspense>
 
-      <Preload all />
-    </Canvas>
-    </div> 
-    
+        <Preload all />
+      </Canvas>
+    </div>
   );
 };
 

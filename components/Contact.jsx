@@ -1,6 +1,6 @@
 "use client";
 
-import { Sectionwrapper } from "../hoc/sectionwrapper";
+
 
 import { motion } from "framer-motion";
 import { fadeIn, slideIn } from "../utils/motion";
@@ -72,14 +72,14 @@ const Contact = () => {
   };
 
   return (
-    <div className="max-w-7xl relative mx-auto  flex-1  ">
-      <div className="flex   justify-center px-3 mt-6 z-20 relative max-lg:flex-col-reverse  max-lg:items-center ">
+    <div className="max-w-7xl my-16 relative mx-auto  flex-1  ">
+      <div className="flex   overflow-hidden justify-center px-3 mt-6 z-20 relative max-lg:flex-col-reverse  max-lg:items-center ">
         <motion.div
           variants={slideIn("left", "tween", 0.2, 1)}
           initial="hidden"
           whileInView={"show"}
           viewport={{ once: true }}
-          className="bg-[url(/curves.svg)] bg-black  bg-[length:800px] "
+          className="bg-[url(/curves.svg)] overflow-hidden rounded-3xl   bg-[length:500px] "
         >
           <div
             className="flex flex-col p-6 flex-1 min-w-[390px] max-sm:min-w-[250px]   border border-white 
@@ -199,4 +199,4 @@ const Contact = () => {
   );
 };
 
-export default Sectionwrapper(Contact, "contact");
+export default Contact

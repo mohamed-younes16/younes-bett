@@ -1,7 +1,8 @@
 "use client";
 
 import Spline from "@splinetool/react-spline";
-
+import Image from "next/image";
+import wave from "@/assets/wave.svg"
 const Hero = () => {
   return (
     <section
@@ -9,8 +10,22 @@ const Hero = () => {
       w-full  "
     >
       <Spline
-        className="fixed max-md:hidden -z-[1] inset-0"
+        className="fixed max-lg:hidden -z-[1] inset-0"
         scene="https://prod.spline.design/QGTAg3FPRbtiP4Pz/scene.splinecode"
+      />
+      <Image
+        src={wave}
+        height={200}
+        width={200}
+        alt=""
+        className="fixed h-fit lg:hidden bg-cover w-full -z-[1] top-[10%]"
+      />
+          <Image
+        src={wave}
+        height={200}
+        width={200}
+        alt=""
+        className="fixed h-fit lg:hidden bg-cover w-full -z-[1] bottom-[5%]"
       />
       <div className="max-w-7xl px-6 flex gap-6 inset-0 mt-[120px] max-md:top-28   items-start  mx-auto">
         <div className="flex flex-col items-center">

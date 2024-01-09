@@ -3,7 +3,7 @@
 import { projects } from "../constants";
 import { motion } from "framer-motion";
 import { fadeIn, textVariant } from "../utils/motion";
-import { github, reactjs } from "@/assets";
+import { reactjs } from "@/assets";
 import next from "@/assets/next.png";
 import { useState } from "react";
 import Image from "next/image";
@@ -108,7 +108,9 @@ const Experience = () => {
                       style={{ animationDuration: "3s" }}
                       className="bg-black p-2 duration-500 group hover:bg-white absolute right-2 top-2  rounded-full "
                     >
-                      <Globe  className={`group-hover:text-black  duration-500`}/>
+                      <Globe
+                        className={`group-hover:text-black  duration-500`}
+                      />
                     </button>
 
                     <Image

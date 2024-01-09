@@ -1,17 +1,20 @@
 "use client";
 import Spline from "@splinetool/react-spline";
-
+import { useMediaQuery } from "usehooks-ts";
 const Hero = () => {
+  const matches = useMediaQuery("(min-width: 1024px)");
   return (
     <section
       className=" p-0 relative flex flex-col items-center 
       w-full  "
     >
-      <Spline
-        className="fixed max-lg:hidden -z-[1] inset-0"
-        scene="https://prod.spline.design/QGTAg3FPRbtiP4Pz/scene.splinecode"
-      />
-    
+      {matches && (
+        <Spline
+          className="fixed max-lg:hidden -z-[1] inset-0"
+          scene="https://prod.spline.design/QGTAg3FPRbtiP4Pz/scene.splinecode"
+        />
+      )}
+
       <div className="max-w-7xl px-6 flex gap-6 inset-0 mt-[120px] max-md:top-28   items-start  mx-auto">
         <div className="flex flex-col items-center">
           <div className="rounded-full bg-violet-500 h-5 w-5 mt-8"></div>

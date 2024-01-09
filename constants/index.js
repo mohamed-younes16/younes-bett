@@ -190,7 +190,7 @@ const projects = [
   {
     next: true,
     name: `Diva design`,
-    description: `Saas aplication design and showcase for the service `,
+    description: `SAAS application design and showcase for the service which offer a range of design services for your Figma startup.`,
     tags: [
       {
         name: `react`,

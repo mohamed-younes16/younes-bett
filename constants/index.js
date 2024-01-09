@@ -22,6 +22,7 @@ import {
   prisma,
   discord,
   ecomm,
+  diva,
 } from "@/assets";
 
 import next from "@/assets/next.png";
@@ -186,6 +187,33 @@ const projects = [
   //   image: three,
 
   // },
+  {
+    next: true,
+    name: `Diva design`,
+    description: `Saas aplication design and showcase for the service `,
+    tags: [
+      {
+        name: `react`,
+        color: `blue-text-gradient`,
+      },
+
+      {
+        name: `NextJs 14`,
+        color: `text-red-800`,
+      },
+      {
+        name: `Tailwind`,
+        color: `text-cyan-400`,
+      },
+      {
+        name: `ShadCn UI`,
+        color: `text-green-600`,
+      },
+    ],
+    dir: `center`,
+    image: diva,
+    source_code_link: `https://diva-five.vercel.app`,
+  },
   {
     next: true,
     name: `Full Stack Ecommer + Admin`,

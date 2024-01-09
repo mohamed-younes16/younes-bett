@@ -44,10 +44,7 @@ const Splash = ({ setFisinshed }) => {
       });
   };
 
-  useEffect(() => {
-    animation();
-  }, []);
-
+ 
   return (
     <div onClick={()=>setFisinshed()} className=" flex  justify-center items-center  fixed inset-0 ">
       <svg

@@ -25,7 +25,9 @@ import node from "./tech/nodejs.png";
 import discord from "./discord.png";
 import prisma from "./prisma.svg";
 import ecomm from "./ecomm.png";
+import diva from "./diva.webp";
 export {
+  diva,
   ecomm,
   prisma,
   hoo,

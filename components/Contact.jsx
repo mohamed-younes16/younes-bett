@@ -1,16 +1,14 @@
 "use client";
 
-
-
 import { motion } from "framer-motion";
 import { fadeIn, slideIn } from "../utils/motion";
-
 
 import emailjs from "@emailjs/browser";
 import { useState } from "react";
 
 import { toast } from "sonner";
 import { Loader2 } from "lucide-react";
+import SocialContact from "./SocialContact";
 
 const Contact = () => {
   const [loading, setloading] = useState(false);
@@ -72,8 +70,8 @@ const Contact = () => {
   };
 
   return (
-    <div id="contact" className="max-w-7xl my-16 relative mx-auto  flex-1  ">
-      <div className="flex overflow-hidden justify-center px-3 mt-6 z-20 relative max-lg:flex-col-reverse  max-lg:items-center ">
+    <div id="contact" className="max-w-7xl mt-16 relative mx-auto   ">
+      <div className="flex overflow-hidden max-sm:flex-col justify-center px-3 mt-6 z-20 relative max-sm:items-center   gap-2 items-end ">
         <motion.div
           variants={slideIn("left", "tween", 0.2, 1)}
           initial="hidden"
@@ -182,21 +180,12 @@ const Contact = () => {
             </form>
           </div>
         </motion.div>
-
-        {/* <motion.div
-          variants={slideIn("right", "tween", 0.2, 1.5)}
-          initial="hidden"
-          whileInView={"show"}
-          viewport={{ once: true }}
-          className=" lg:flex-1 h-[350px] md:h-auto "
-        >
-
-    
-        </motion.div> */}
+        <div className="md:hidden max-sm:mt-6 max-sm:w-full">
+          <SocialContact />
+        </div>
       </div>
-    
     </div>
   );
 };
 
-export default Contact
+export default Contact;

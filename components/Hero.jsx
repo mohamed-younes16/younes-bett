@@ -10,6 +10,7 @@ const Hero = () => {
     >
       {matches && (
         <Spline
+        suppressHydrationWarning
           className="fixed max-lg:hidden -z-[1] inset-0"
           scene="https://prod.spline.design/QGTAg3FPRbtiP4Pz/scene.splinecode"
         />

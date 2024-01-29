@@ -216,7 +216,7 @@ const projects = [
   },
   {
     next: true,
-    name: `Full Stack Ecommer + Admin`,
+    name: `Ecommerce store + Admin dashboard`,
     description: `Fully Ecommerce app with payements included with Stripe and an admin with full control  to manage all Products which are fetched and displayed in the store side `,
     tags: [
       {

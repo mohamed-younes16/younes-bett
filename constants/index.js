@@ -23,6 +23,7 @@ import {
   discord,
   ecomm,
   diva,
+  airbnb,
 } from "@/assets";
 
 import next from "@/assets/next.png";
@@ -187,6 +188,33 @@ const projects = [
   //   image: three,
 
   // },
+  {
+    next: true,
+    name: `AirbBnb Clone`,
+    description: `full-stack airbnb clone web application using the latest web development technologies including React, Tailwind, Prisma , ShadCn UI, and Clerk.`,
+    tags: [
+      {
+        name: `react`,
+        color: `blue-text-gradient`,
+      },
+
+      {
+        name: `NextJs 14`,
+        color: `text-red-800`,
+      },
+      {
+        name: `Tailwind`,
+        color: `text-cyan-400`,
+      },
+      {
+        name: `ShadCn UI`,
+        color: `text-green-600`,
+      },
+    ],
+    dir: `left`,
+    image: airbnb,
+    source_code_link: `https://air-clo.vercel.app`,
+  },
   {
     next: true,
     name: `Diva design`,

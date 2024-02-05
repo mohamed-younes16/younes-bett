@@ -26,7 +26,9 @@ import discord from "./discord.png";
 import prisma from "./prisma.svg";
 import ecomm from "./ecomm.png";
 import diva from "./diva.webp";
+import airbnb from "./airbnb.webp";
 export {
+  airbnb,
   diva,
   ecomm,
   prisma,

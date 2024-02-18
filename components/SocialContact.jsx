@@ -1,14 +1,15 @@
-import { GithubIcon, Instagram,  } from "lucide-react";
+import { GithubIcon, Instagram } from "lucide-react";
 
 import Link from "next/link";
 
-
 const SocialContact = () => {
   return (
- 
-    <div className="flex gap-4 max-sm:justify-center 
-     max-sm:gap-6 sm:flex-col  max-sm:w-full items-center max-sm:h-[100px] sm:w-[50px]    ">
+    <div
+      className="flex gap-4 max-sm:justify-center 
+     max-sm:gap-6 sm:flex-col  max-sm:w-full items-center max-sm:h-[100px] sm:w-[50px]    "
+    >
       <Link
+        aria-label="Fiverr link"
         target="_blank"
         href={"https://www.fiverr.com/younes_mohamed7"}
         className="flex rounded-full sm:h-[50px]   w-[50px] 
@@ -38,6 +39,7 @@ const SocialContact = () => {
 
       <Link
         target="_blank"
+        aria-label="instagram link"
         href={"https://www.instagram.com/younesmohamed_77"}
         className=" flex justify-end items-start sm:flex-1 transition-all  duration-100 r
        hover:text-white text-neutral-400   hover:bg-gradient-to-r
@@ -49,6 +51,7 @@ const SocialContact = () => {
 
       <Link
         target="_blank"
+        aria-label="github link"
         href={"https://github.com/mohamed-younes16"}
         className=" flex justify-end items-start text-neutral-400  sm:flex-1  transition-all  duration-100 r
        hover:text-white hover:bg-gradient-to-r
@@ -58,6 +61,7 @@ const SocialContact = () => {
         <GithubIcon className=" h-[35px] w-[35px]  " />
       </Link>
       <Link
+        aria-label="twitter link"
         target="_blank"
         href={"https://twitter.com/younesmed_77"}
         className=" flex justify-end items-start text-neutral-400  sm:flex-1  transition-all  duration-100 r
@@ -67,21 +71,16 @@ const SocialContact = () => {
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          
           viewBox="0 0 512 462.799"
           className=" fill-neutral-400 hover:fill-white h-[35px] w-[35px]   duration-100 group-hover:fill-black"
         >
-          <path
-           
-            d="M403.229 0h78.506L310.219 196.04 512 462.799H354.002L230.261 301.007 88.669 462.799h-78.56l183.455-209.683L0 0h161.999l111.856 147.88L403.229 0zm-27.556 415.805h43.505L138.363 44.527h-46.68l283.99 371.278z"
-          />
+          <path d="M403.229 0h78.506L310.219 196.04 512 462.799H354.002L230.261 301.007 88.669 462.799h-78.56l183.455-209.683L0 0h161.999l111.856 147.88L403.229 0zm-27.556 415.805h43.505L138.363 44.527h-46.68l283.99 371.278z" />
         </svg>
         {/* <TwitterIcon className=" h-[35px] w-[35px]  " /> */}
       </Link>
       <div className="w-[1px] mt-[10px] max-sm:hidden  bg-[white] h-[100px]"></div>
     </div>
+  );
+};
 
-  )
-}
-
-export default SocialContact
+export default SocialContact;

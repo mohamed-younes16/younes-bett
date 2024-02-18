@@ -1,18 +1,47 @@
 "use client";
 import Spline from "@splinetool/react-spline";
 import { useMediaQuery } from "usehooks-ts";
+import { GoogleGeminiEffect } from "./ui/Gemini";
+import { useScroll, useTransform } from "framer-motion";
+import {useRef } from "react";
 const Hero = () => {
+  const ref = useRef();
+
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start start", "end start"],
+  });
+
+  const pathLengthFirst = useTransform(scrollYProgress, [0, 0.8], [0.2, 1.2]);
+  const pathLengthSecond = useTransform(scrollYProgress, [0, 0.8], [0.15, 1.2]);
+  const pathLengthThird = useTransform(scrollYProgress, [0, 0.8], [0.1, 1.2]);
+  const pathLengthFourth = useTransform(scrollYProgress, [0, 0.8], [0.05, 1.2]);
+  const pathLengthFifth = useTransform(scrollYProgress, [0, 0.8], [0, 1.2]);
+
   const matches = useMediaQuery("(min-width: 1024px)");
   return (
     <section
       className=" p-0 relative flex flex-col items-center 
       w-full  "
     >
-      {matches && (
-        <Spline
-        suppressHydrationWarning
-          className="fixed max-lg:hidden -z-[1] inset-0"
-          scene="https://prod.spline.design/QGTAg3FPRbtiP4Pz/scene.splinecode"
+      {matches ? (
+        <>
+          <Spline
+            suppressHydrationWarning
+            className="fixed max-lg:hidden -z-[1] inset-0"
+            scene="https://prod.spline.design/QGTAg3FPRbtiP4Pz/scene.splinecode"
+          />
+        </>
+      ) : (
+        <GoogleGeminiEffect
+          className=" fixed w-[100dvw]  left-0 h-[50dvh] top-1/2  -translate-y-1/2 flexcenter"
+          pathLengths={[
+            pathLengthFirst,
+            pathLengthSecond,
+            pathLengthThird,
+            pathLengthFourth,
+            pathLengthFifth,
+          ]}
         />
       )}
 

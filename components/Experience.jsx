@@ -105,6 +105,7 @@ const Experience = () => {
                           e.source_code_link ? e.source_code_link : "#contact"
                         )
                       }
+                      aria-label="go to the website"
                       style={{ animationDuration: "3s" }}
                       className="bg-black p-2 duration-500 group hover:bg-white absolute right-2 top-2  rounded-full "
                     >

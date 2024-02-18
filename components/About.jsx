@@ -23,7 +23,6 @@ const About = () => {
 
       <h2 className="font-bold text-5xl max-md:text-3xl my-6">Overview</h2>
       <motion.p
-    
         variants={fadeIn("", "", 0.2, 1)}
         initial="hidden"
         whileInView={"show"}
@@ -39,23 +38,15 @@ const About = () => {
 
       <div className="flex flex-wrap  gap-11 mt-12  justify-center">
         {services.map((e, i) => (
-          <motion.div
-        
-            key={i}
-            className="cursor-pointer "
-          >
+          <motion.div key={i} className="cursor-pointer ">
             <motion.div
-      
               initial={{
-              
                 opacity: 0,
                 x: `${
-                  window &&
-                  (i < services.length / 2 ? "100px" : "-100px")
+                  window && (i < services.length / 2 ? "100px" : "-100px")
                 }`,
               }}
               whileInView={{
-              
                 opacity: 1,
                 x: "0px",
               }}
@@ -79,7 +70,9 @@ const About = () => {
                   alt={`${e.title} icon`}
                   className=" w-12 h-12"
                 />
-                <p className="font-semibold text-xl max-md:text-base">{e.title}</p>
+                <p className="font-semibold text-xl max-md:text-base">
+                  {e.title}
+                </p>
               </div>
             </motion.div>
           </motion.div>

@@ -1,6 +1,5 @@
 "use client";
 import { useEffect, useState } from "react";
-
 const Percentage = () => {
   const [isfull, setfull] = useState(0);
   useEffect(() => {
@@ -22,20 +21,13 @@ const Percentage = () => {
   return (
     <>
       {" "}
+      
       <div
         style={{ width: `${isfull}%` }}
-        className={`h-1  
+        className={`h-[2px]  
     duration-150 
-       bg-[white]  
+       bg-[linear-gradient(to_right,#18CCFC,#AE48FF)]  
         bg-fixed dark:bg-primary-blue-100 fixed z-[999] top-0 left-0`}
-      />
-      <div
-        style={{ left: `${(isfull || 0)}%` }}
-        className={`h-1
-        w-1 
-        shadow-[0px_0px_16px_13px_white] duration-150 
-       bg-[white]  
-        bg-fixed dark:bg-primary-blue-100 fixed z-[99] rounded-full -top-2 `}
       />
     </>
   );

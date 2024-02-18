@@ -1,7 +1,6 @@
 import { Poppins } from "next/font/google";
 import "./globals.css";
 import "tailwindcss/tailwind.css";
-import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -21,6 +20,7 @@ export default function RootLayout({ children }) {
       lang="en"
     >
       <body>
+        <Analytics />
         {children} 
        
       </body>

@@ -34,7 +34,7 @@ const Hero = () => {
         </>
       ) : (
         <GoogleGeminiEffect
-          className=" fixed w-[100dvw]  left-0 h-[50dvh] top-1/2  -translate-y-1/2 flexcenter"
+          className=" fixed w-[100dvw]  left-0 h-[50dvh] top-1/2 lg:hidden  -translate-y-1/2 flexcenter"
           pathLengths={[
             pathLengthFirst,
             pathLengthSecond,

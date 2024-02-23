@@ -6,16 +6,9 @@ import { motion } from "framer-motion";
 import { services } from "@/constants";
 import { fadeIn } from "@/utils/motion";
 import Image from "next/image";
-import { useState } from "react";
-import { useEffect } from "react";
+
 const About = () => {
-  const [windowobj, setWindow] = useState(null);
 
-  useEffect(() => {
-    setWindow(true);
-  }, []);
-
-  if (!windowobj) return <></>;
 
   return (
     <div className="px-6 py-0 max-w-7xl mx-auto mt-10" id="about">
@@ -43,7 +36,7 @@ const About = () => {
               initial={{
                 opacity: 0,
                 x: `${
-                  window && (i < services.length / 2 ? "100px" : "-100px")
+                  (i < services.length / 2 ? "100px" : "-100px")
                 }`,
               }}
               whileInView={{

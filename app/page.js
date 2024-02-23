@@ -13,12 +13,14 @@ import Percentage from "@/components/Percentage";
 import { Toaster } from "sonner";
 
 import SocialContact from "@/components/SocialContact";
+import { useState } from "react";
+import Splash from "@/components/Splash";
 
 export default function Home() {
+  const [finished, setIsFinished] = useState(false);
 
-  return (
+  return finished ? (
     <main id="main" className=" bg-[url(/grid.svg)] relative  min-h-screen  ">
- 
       <Toaster richColors position="top-center" />
 
       <div id="main" className=" main z-0 relative overflow-x-hidden">
@@ -43,5 +45,7 @@ export default function Home() {
         </div>
       </div>
     </main>
+  ) : (
+    <Splash setFisinshed={() => setIsFinished(true)} />
   );
 }

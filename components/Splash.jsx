@@ -1,17 +1,32 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 "use client";
 import anime from "animejs/lib/anime.es.js";
 
 import { useEffect } from "react";
 
 const Splash = ({ setFisinshed }) => {
-
   const animation = () => {
-    const lodaer = anime.timeline({
-      complete: () =>{
-    
-         setFisinshed()},
+    const loader = anime.timeline({ complete: () => setFisinshed() });
+    const loader2 = anime.timeline({});
+    const loader3 = anime.timeline({});
+
+    loader2.add({
+      delay: 1100,
+      rotateZ: -135,
+      width: "50%",
+      targets: "#load2",
+      duration: 800,
+      easing: "easeInOutQuart",
     });
-    lodaer
+    loader3.add({
+      rotateZ: 135,
+      width: "50%",
+      targets: "#load",
+      delay: 1100,
+      duration: 800,
+      easing: "easeInOutQuart",
+    });
+    loader
       .add({
         opacity: 1,
         targets: "#logo path",
@@ -20,6 +35,7 @@ const Splash = ({ setFisinshed }) => {
         easing: "easeInOutQuart",
         strokeDashoffset: [anime.setDashoffset, 0],
       })
+
       .add({
         targets: "#logo",
         delay: 0,
@@ -43,13 +59,18 @@ const Splash = ({ setFisinshed }) => {
         opacity: 1,
       });
   };
+  useEffect(() => {
+    animation();
+  }, []);
 
- 
   return (
-    <div onClick={()=>setFisinshed()} className=" flex  justify-center items-center  fixed inset-0 ">
+    <div
+      onClick={() => setFisinshed()}
+      className=" flex flex-col   bg-[url(/grid.svg)]  justify-center items-center  fixed inset-0 "
+    >
       <svg
         id="logo"
-        className=" relative  h-32  text-white w-32 "
+        className="  relative  h-32  text-white w-32 "
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 100 100"
       >
@@ -82,6 +103,17 @@ const Splash = ({ setFisinshed }) => {
           Y
         </text>
       </svg>
+
+      <div
+        style={{ translate: "-50% -50%" }}
+        id="load"
+        className=" bg-white fixed top-1/2 left-1/2  -z-10  blur-md  h-1  rounded-xl blur-x  w-0"
+      ></div>
+      <div
+        style={{ translate: "-50% -50%" }}
+        id="load2"
+        className=" bg-white h-1  fixed top-1/2 left-1/2 -z-10  blur-md  rounded-xl blur-x w-0"
+      ></div>
     </div>
   );
 };

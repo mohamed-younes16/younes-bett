@@ -3,8 +3,8 @@ import Spline from "@splinetool/react-spline";
 import { useMediaQuery } from "usehooks-ts";
 import { GoogleGeminiEffect } from "./ui/Gemini";
 import { useScroll, useTransform } from "framer-motion";
-import {useRef } from "react";
-const Hero = () => {
+import { useRef } from "react";
+const Hero = ({ setIsFinished }) => {
   const ref = useRef();
 
   const { scrollYProgress } = useScroll({
@@ -27,6 +27,11 @@ const Hero = () => {
       {matches ? (
         <>
           <Spline
+            onLoad={() =>
+              setTimeout(() => {
+                setIsFinished();
+              }, 500)
+            }
             suppressHydrationWarning
             className="fixed max-lg:hidden -z-[1] inset-0"
             scene="https://prod.spline.design/QGTAg3FPRbtiP4Pz/scene.splinecode"

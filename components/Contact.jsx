@@ -69,7 +69,6 @@ const Contact = () => {
 
   return (
     <div id="contact" className="max-w-7xl  mt-16 relative mx-auto   ">
-    
       <div className="flex overflow-hidden max-lg:flex-col-reverse justify-between px-3 mt-6 z-20 relative items-center   gap-2  ">
         <div className="flexcenter realtive items-end max-sm:flex-col flex-1">
           <motion.div
@@ -77,13 +76,13 @@ const Contact = () => {
             initial="hidden"
             whileInView={"show"}
             viewport={{ once: true }}
-            className="h-fit  dark:bg-black bg-white  bg-dot-white/[.8] relative   overflow-hidden rounded-3xl   "
+            className="h-fit bg-black  bg-dot-white/[.8] relative   overflow-hidden rounded-3xl   "
           >
             {" "}
             <Meteors className=" absolute  bg-white" number={10} />
             <div
               className="absolute pointer-events-none z-[-5] inset-0 flex items-center justify-center
-             dark:bg-black bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_0%,black_50%)]"
+              [background-image:radial-gradient(ellipse_at_center,transparent_0%,black_60%)]"
             ></div>
             <div
               className="flex flex-col p-6 flex-1 min-w-[390px] max-sm:min-w-[250px]   border border-white 

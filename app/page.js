@@ -7,7 +7,7 @@ import { useState } from "react";
 import Splash from "@/components/Splash";
 
 export default function Home() {
-  const [finished, setIsFinished] = useState(true);
+  const [finished, setIsFinished] = useState(false);
 
   return finished ? (
     <>

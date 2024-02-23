@@ -16,7 +16,7 @@ import hoo from "./hoo.avif";
 import nikeapp from "./nike.avif";
 import dashboard from "./dashboard.avif";
 import gymApp from "./gym.avif";
-import carrent from "./carrent.avif";
+import carrent from "./carrent.webp";
 import weather from "./weather.avif";
 import felixbble from "./felixbble.avif";
 import twitt from "./twitt.png";
@@ -24,7 +24,7 @@ import mongodb from "./tech/mongodb.png";
 import node from "./tech/nodejs.png";
 import discord from "./discord.png";
 import prisma from "./prisma.svg";
-import ecomm from "./ecomm.png";
+import ecomm from "./ecomm.webp";
 import diva from "./diva.webp";
 import airbnb from "./airbnb.webp";
 export {

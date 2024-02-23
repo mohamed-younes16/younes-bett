@@ -1,56 +1,22 @@
 "use client";
-import Spline from "@splinetool/react-spline";
-import { useMediaQuery } from "usehooks-ts";
-import { GoogleGeminiEffect } from "./ui/Gemini";
-import { useScroll, useTransform } from "framer-motion";
-import { useRef } from "react";
-const Hero = ({ setIsFinished }) => {
-  const ref = useRef();
 
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["start start", "end start"],
-  });
 
-  const pathLengthFirst = useTransform(scrollYProgress, [0, 0.8], [0.2, 1.2]);
-  const pathLengthSecond = useTransform(scrollYProgress, [0, 0.8], [0.15, 1.2]);
-  const pathLengthThird = useTransform(scrollYProgress, [0, 0.8], [0.1, 1.2]);
-  const pathLengthFourth = useTransform(scrollYProgress, [0, 0.8], [0.05, 1.2]);
-  const pathLengthFifth = useTransform(scrollYProgress, [0, 0.8], [0, 1.2]);
+import GlassMove from "./GlassMove";
 
-  const matches = useMediaQuery("(min-width: 1024px)");
+const Hero = () => {
+
   return (
     <section
+    id="hero"
       className=" p-0 relative flex flex-col items-center 
       w-full  "
     >
-      {matches ? (
-        <>
-          <Spline
-            onLoad={() =>
-              setTimeout(() => {
-                setIsFinished();
-              }, 500)
-            }
-            suppressHydrationWarning
-            className="fixed max-lg:hidden -z-[1] inset-0"
-            scene="https://prod.spline.design/QGTAg3FPRbtiP4Pz/scene.splinecode"
-          />
-        </>
-      ) : (
-        <GoogleGeminiEffect
-          className=" fixed w-[100dvw]  left-0 h-[50dvh] top-1/2 lg:hidden  -translate-y-1/2 flexcenter"
-          pathLengths={[
-            pathLengthFirst,
-            pathLengthSecond,
-            pathLengthThird,
-            pathLengthFourth,
-            pathLengthFifth,
-          ]}
-        />
-      )}
+     
+          <GlassMove />
+      
+     
 
-      <div className="max-w-7xl px-6 flex gap-6 inset-0 mt-[120px] max-md:top-28   items-start  mx-auto">
+      <div className="max-w-7xl px-6 flex gap-6 inset-0 mt-[70px] max-sm:mt-28   items-start  mx-auto">
         <div className="flex flex-col items-center">
           <div className="rounded-full bg-violet-500 h-5 w-5 mt-8"></div>
           <div className="violet-gradient w-1 h-40 rounded-b-3xl"> </div>

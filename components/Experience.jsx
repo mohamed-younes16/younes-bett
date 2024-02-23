@@ -18,7 +18,7 @@ const Experience = () => {
         : document
             ?.getElementById("contact")
             .scrollIntoView({ behavior: "smooth" });
-    }, 500);
+    }, 300);
   };
   return (
     <>
@@ -61,9 +61,9 @@ const Experience = () => {
             <div
               data-speed={(0.1 * i).toFixed(1)}
               key={i}
-              className={`active:scale-95  lg:hover:scale-105 transition-all   
+              className={` transition-all   
                 max-lg:w-[320px]  duration-300 relative ${
-                  i < limit ? " lg:h-[550px] w-[340px]  " : "hidden"
+                  i < limit ? " lg:h-[550px] w-[330px]  " : "hidden"
                 } `}
             >
               <motion.div
@@ -73,7 +73,7 @@ const Experience = () => {
                 viewport={{ once: true, amount: 0.4 }}
                 className="w-full h-full z-30  relative transition-all 
                
-                        p-[2px] rounded-2xl hover:shadow-card"
+                        p-[2px] rounded-2xl "
               >
                 {e.next ? (
                   <Image
@@ -97,7 +97,7 @@ const Experience = () => {
                       transition-all duration-500
                   border-neutral-500 border-[2px] hover:shadow-card  z-10 p-3  bg-cover rounded-2xl`}
                 >
-                  <div className="rounded-2xl h-[220px] relative overflow-hidden">
+                  <div className="rounded-2xl h-[235px] relative overflow-hidden">
                     <button
                       onClick={(ev) =>
                         handlego(

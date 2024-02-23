@@ -8,8 +8,6 @@ import { fadeIn } from "@/utils/motion";
 import Image from "next/image";
 
 const About = () => {
-
-
   return (
     <div className="px-6 py-0 max-w-7xl mx-auto mt-10" id="about">
       <p className=" text-secondary max-sm:text-base text-lg">INTRODUCTION</p>
@@ -35,9 +33,7 @@ const About = () => {
             <motion.div
               initial={{
                 opacity: 0,
-                x: `${
-                  (i < services.length / 2 ? "100px" : "-100px")
-                }`,
+                x: `${i < services.length / 2 ? "100px" : "-100px"}`,
               }}
               whileInView={{
                 opacity: 1,

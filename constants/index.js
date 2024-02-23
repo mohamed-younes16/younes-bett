@@ -31,15 +31,18 @@ import next from "@/assets/next.png";
 export const navLinks = [
   {
     id: `#about`,
+    link: "/#hero",
     title: `About`,
   },
   {
     id: `#work`,
     title: `Work`,
+    link: "projects#work",
   },
   {
     id: `#contact`,
     title: `Contact`,
+    link: "projects#contact",
   },
 ];
 

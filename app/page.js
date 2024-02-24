@@ -2,14 +2,13 @@
 
 import { Hero, Tech, Works, About, Navbar } from "@/components";
 import Percentage from "@/components/Percentage";
-
-import { useState } from "react";
 import Splash from "@/components/Splash";
+import { useStore } from "@/utils/store";
 
 export default function Home() {
-  const [finished, setIsFinished] = useState(false);
+ const {isReady} = useStore()
 
-  return finished ? (
+  return isReady ? (
     <>
       {" "}
       <div
@@ -26,6 +25,6 @@ export default function Home() {
       <Tech />
     </>
   ) : (
-    <Splash setFisinshed={() => setIsFinished(true)} />
+    <Splash  />
   );
 }

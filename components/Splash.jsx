@@ -1,12 +1,14 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 "use client";
+import { useStore } from "@/utils/store";
 import anime from "animejs/lib/anime.es.js";
 
 import { useEffect } from "react";
 
-const Splash = ({ setFisinshed }) => {
+const Splash = () => {
+  const {setIsReady} = useStore()
   const animation = () => {
-    const loader = anime.timeline({ complete: () => setFisinshed() });
+    const loader = anime.timeline({ complete: () => setIsReady(true) });
     const loader2 = anime.timeline({});
     const loader3 = anime.timeline({});
 
@@ -65,7 +67,7 @@ const Splash = ({ setFisinshed }) => {
 
   return (
     <div
-      onClick={() => setFisinshed()}
+      onClick={() =>setIsReady(true) }
       className=" flex flex-col   bg-[url(/grid.svg)]  justify-center items-center  fixed inset-0 "
     >
       <svg

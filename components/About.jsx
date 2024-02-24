@@ -1,6 +1,6 @@
 "use client";
 
-/* eslint-disable react/no-unescaped-entities */
+
 
 import { motion } from "framer-motion";
 import { services } from "@/constants";
@@ -20,11 +20,11 @@ const About = () => {
         viewport={{ once: true }}
         className="text-secondary"
       >
-        I'm a skilled software developer with experience in TypeScript and
-        JavaScript, and expertise in frameworks like React , and NextJS. I'm a
+        I&apos;m a skilled software developer with experience in TypeScript and
+        JavaScript, and expertise in frameworks like React , and NextJS. I&apos;m a
         quick learner and collaborate closely with clients to create efficient,
-        scalable, and user-friendly solutions that solve real-world problems.
-        Let's work together to bring your ideas to life!
+        scalable, and user-friendly web apps.
+        Let&apos;s work together to bring your ideas to life!
       </motion.p>
 
       <div className="flex flex-wrap  gap-11 mt-12  justify-center">

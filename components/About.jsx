@@ -1,7 +1,5 @@
 "use client";
 
-
-
 import { motion } from "framer-motion";
 import { services } from "@/constants";
 import { fadeIn } from "@/utils/motion";
@@ -20,11 +18,11 @@ const About = () => {
         viewport={{ once: true }}
         className="text-secondary"
       >
-        I&apos;m a skilled software developer with experience in TypeScript and
-        JavaScript, and expertise in frameworks like React , and NextJS. I&apos;m a
-        quick learner and collaborate closely with clients to create efficient,
-        scalable, and user-friendly web apps.
-        Let&apos;s work together to bring your ideas to life!
+        I&apos;m a web developer with experience in TypeScript and JavaScript,
+        and expertise in frameworks like React-JS , and Next-JS. I&apos;m a quick
+        learner and collaborate closely with clients to create efficient,
+        scalable, and user-friendly web apps. Let&apos;s work together to bring
+        your ideas to life!
       </motion.p>
 
       <div className="flex flex-wrap  gap-11 mt-12  justify-center">

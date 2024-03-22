@@ -23,13 +23,12 @@ export default function RootLayout({ children }) {
     >
       <body>
         <Analytics />
-        <main
-          id="main"
-          className=" bg-[url(/grid.svg)] relative  min-h-screen  "
-        >
+        <main id="main" className=" bg-[url(/grid.svg)]  min-h-screen  ">
           <Toaster richColors position="top-center" />
-          <GlassMove/>
-          <div className=" main z-0 relative overflow-hidden">{children}</div>
+          <GlassMove />
+          <div className=" main z-0  max-md:pt-[120px] pt-[75px] overflow-hidden">
+            {children}
+          </div>
         </main>
       </body>
     </html>

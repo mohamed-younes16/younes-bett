@@ -217,6 +217,32 @@ const projects = [
     dir: `left`,
     image: airbnb,
     source_code_link: `https://air-clo.vercel.app`,
+  }, {
+    next: true,
+    name: `Ecommerce store + Admin dashboard`,
+    description: `Fully Ecommerce app with payements included with Stripe and an admin with full control  to manage all Products which are fetched and displayed in the store side `,
+    tags: [
+      {
+        name: `react`,
+        color: `blue-text-gradient`,
+      },
+
+      {
+        name: `NextJs 14`,
+        color: `text-red-800`,
+      },
+      {
+        name: `Tailwind`,
+        color: `text-cyan-400`,
+      },
+      {
+        name: `ShadCn UI`,
+        color: `text-green-600`,
+      },
+    ],
+    dir: `left`,
+    image: ecomm,
+    source_code_link: `https://ecommerce-dash-front.vercel.app`,
   },
   {
     next: true,
@@ -245,33 +271,7 @@ const projects = [
     image: diva,
     source_code_link: `https://diva-five.vercel.app`,
   },
-  {
-    next: true,
-    name: `Ecommerce store + Admin dashboard`,
-    description: `Fully Ecommerce app with payements included with Stripe and an admin with full control  to manage all Products which are fetched and displayed in the store side `,
-    tags: [
-      {
-        name: `react`,
-        color: `blue-text-gradient`,
-      },
-
-      {
-        name: `NextJs 14`,
-        color: `text-red-800`,
-      },
-      {
-        name: `Tailwind`,
-        color: `text-cyan-400`,
-      },
-      {
-        name: `ShadCn UI`,
-        color: `text-green-600`,
-      },
-    ],
-    dir: `left`,
-    image: ecomm,
-    source_code_link: `https://ecommerce-dash-front.vercel.app`,
-  },
+ 
   {
     next: true,
     name: `Full Stack Dribble clone `,

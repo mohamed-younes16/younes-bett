@@ -22,7 +22,7 @@ const Experience = () => {
   };
   return (
     <>
-      <div className="max-w-7xl px-4 mx-auto mt-12" id="work">
+      <div className="max-w-7xl px-4 mx-auto mt-4" id="work">
         <motion.p
           variants={textVariant()}
           initial="hidden"
@@ -31,7 +31,7 @@ const Experience = () => {
           className="text-secondary text-lg"
         >
           {" "}
-          MY Actuall WORK
+          MY PROJECTS
         </motion.p>
 
         <motion.h3

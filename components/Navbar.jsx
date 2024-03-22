@@ -10,7 +10,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className=" fixed  backdrop-blur-lg w-full z-[99] border-b border-zinc-400/30  transition duration-500 p-4
+      className=" fixed top-0  backdrop-blur-lg w-full z-[99] border-b border-zinc-400/30  transition duration-500 p-4
     "
     >
       <div className="container mx-auto">

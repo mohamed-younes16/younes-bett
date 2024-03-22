@@ -6,7 +6,7 @@ import anime from "animejs/lib/anime.es.js";
 import { useEffect } from "react";
 
 const Splash = () => {
-  const {setIsReady} = useStore()
+  const { setIsReady } = useStore();
   const animation = () => {
     const loader = anime.timeline({ complete: () => setIsReady(true) });
     const loader2 = anime.timeline({});
@@ -15,14 +15,14 @@ const Splash = () => {
     loader2.add({
       delay: 1100,
       rotateZ: -135,
-      width: "50%",
+      width: "250px",
       targets: "#load2",
       duration: 800,
       easing: "easeInOutQuart",
     });
     loader3.add({
       rotateZ: 135,
-      width: "50%",
+      width: "250px",
       targets: "#load",
       delay: 1100,
       duration: 800,
@@ -67,7 +67,7 @@ const Splash = () => {
 
   return (
     <div
-      onClick={() =>setIsReady(true) }
+      onClick={() => setIsReady(true)}
       className=" flex flex-col   bg-[url(/grid.svg)]  justify-center items-center  fixed inset-0 "
     >
       <svg

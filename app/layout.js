@@ -1,10 +1,10 @@
-import { Poppins } from "next/font/google";
+import { Titillium_Web } from "next/font/google";
 import "./globals.css";
 import "tailwindcss/tailwind.css";
 
-const poppins = Poppins({
+const Titillium = Titillium_Web({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800", "900"],
+  weight: ["400", "600", "700", "900"],
 });
 import { Analytics } from "@vercel/analytics/react";
 import { Toaster } from "sonner";
@@ -18,7 +18,7 @@ export default function RootLayout({ children }) {
   return (
     <html
       suppressHydrationWarning
-      className={`${poppins.className} bg-black `}
+      className={`${Titillium.className} bg-black `}
       lang="en"
     >
       <body>

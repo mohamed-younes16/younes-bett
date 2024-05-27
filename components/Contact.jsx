@@ -70,13 +70,13 @@ const Contact = () => {
   return (
     <div id="contact" className="max-w-7xl  mt-16 relative mx-auto   ">
       <div className="flex overflow-hidden max-lg:flex-col-reverse justify-between px-3 mt-6 z-20 relative items-center   gap-2  ">
-        <div className="flexcenter realtive items-end max-sm:flex-col flex-1">
+        <div className="flexcenter realtive items-end max-sm:w-full max-sm:items-center max-sm:flex-col flex-1">
           <motion.div
             variants={slideIn("left", "tween", 0.2, 1)}
             initial="hidden"
             whileInView={"show"}
             viewport={{ once: true }}
-            className="h-fit bg-black  bg-dot-white/[.8] relative   overflow-hidden rounded-3xl   "
+            className="h-fit bg-black max-sm:w-full  bg-dot-white/[.8] relative   overflow-hidden rounded-3xl   "
           >
             {" "}
             <Meteors className=" absolute  bg-white" number={10} />

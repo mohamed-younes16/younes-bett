@@ -66,6 +66,7 @@ module.exports = {
   },
   safelist: [
     "bg-red-500",
+    "text-violet-400",
     "text-3xl",
     "lg:text-4xl",
     "blue-text-gradient",

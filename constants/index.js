@@ -24,6 +24,7 @@ import {
   ecomm,
   diva,
   airbnb,
+  dashCraft,
 } from "@/assets";
 
 import next from "@/assets/next.png";
@@ -217,7 +218,9 @@ const projects = [
     dir: `left`,
     image: airbnb,
     source_code_link: `https://air-clo.vercel.app`,
-  }, {
+  },
+
+  {
     next: true,
     name: `Ecommerce store + Admin dashboard`,
     description: `Fully Ecommerce app with payements included with Stripe and an admin with full control  to manage all Products which are fetched and displayed in the store side `,
@@ -230,6 +233,10 @@ const projects = [
       {
         name: `NextJs 14`,
         color: `text-red-800`,
+      },
+      {
+        name: `Framer Motion`,
+        color: `text-violet-400`,
       },
       {
         name: `Tailwind`,
@@ -247,7 +254,7 @@ const projects = [
   {
     next: true,
     name: `Diva design`,
-    description: `SAAS application design and showcase for the service which offer a range of design services for your Figma startup.`,
+    description: `SAAS application design and showcase for a service which offers a range of design services for your Figma startup.`,
     tags: [
       {
         name: `react`,
@@ -271,10 +278,40 @@ const projects = [
     image: diva,
     source_code_link: `https://diva-five.vercel.app`,
   },
- 
   {
     next: true,
-    name: `Full Stack Dribble clone `,
+    name: `Dashcraft design`,
+    description: `Another SAAS presentation design i created and a showcase for a service which offers a Management course idea.`,
+    tags: [
+      {
+        name: `react`,
+        color: `blue-text-gradient`,
+      },
+
+      {
+        name: `NextJs 14`,
+        color: `text-red-800`,
+      },
+      {
+        name: `Framer Motion`,
+        color: `text-violet-400`,
+      },
+      {
+        name: `TailwindCSS`,
+        color: `text-cyan-400`,
+      },
+      {
+        name: `ShadCn UI`,
+        color: `text-green-600`,
+      },
+    ],
+    dir: `center`,
+    image: dashCraft,
+    source_code_link: `https://dashcraft.vercel.app`,
+  },
+  {
+    next: true,
+    name: `Full-Stack Dribble clone `,
     description: `App inspired from dribble with full stack features => ( CRUD , authentication )
        that provide  for users share their projects pictures and source repos and livesites 
        with some description with dark theme toggle  `,
@@ -303,7 +340,7 @@ const projects = [
   },
   {
     next: true,
-    name: `Full Stack Discord clone `,
+    name: `Full Stack Discord Clone `,
     description: `discord clone with full stack features that provide  for users to message in servers and send  pictures documents file with 
       dark theme toggle with a postgresql db  `,
     tags: [

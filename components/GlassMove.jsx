@@ -11,7 +11,7 @@ import { useMemo } from "react";
 
 const GlassMove = () => {
   const ref = useRef();
-  const { isReady } = useStore();
+  const { isReady, } = useStore();
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["start start", "end start"],

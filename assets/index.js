@@ -27,7 +27,9 @@ import prisma from "./prisma.svg";
 import ecomm from "./ecomm.webp";
 import diva from "./diva.webp";
 import airbnb from "./airbnb.webp";
+import dashCraft from "./dashcraft.webp"
 export {
+  dashCraft,
   airbnb,
   diva,
   ecomm,

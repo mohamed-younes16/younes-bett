@@ -1,12 +1,12 @@
 "use client";
 import { useEffect, useState } from "react";
 const Percentage = () => {
-  const [isfull, setfull] = useState(0);
+  const [isfull, setfull] = useState<number>(0);
   useEffect(() => {
     const getper = () => {
       const h = document?.documentElement.scrollHeight - window.innerHeight;
       const dcrol = window?.scrollY;
-      setfull(((dcrol / h) * 100).toFixed());
+      setfull(+((dcrol / h) * 100).toFixed());
     };
 
     window.addEventListener("scroll", getper);
@@ -21,7 +21,6 @@ const Percentage = () => {
   return (
     <>
       {" "}
-      
       <div
         style={{ width: `${isfull}%` }}
         className={`h-[2px]  

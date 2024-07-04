@@ -1,5 +1,5 @@
 import { Titillium_Web } from "next/font/google";
-import "./globals.css";
+import "./globals.css"
 import "tailwindcss/tailwind.css";
 
 const Titillium = Titillium_Web({

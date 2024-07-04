@@ -6,7 +6,7 @@ import Splash from "@/components/Splash";
 import { useStore } from "@/utils/store";
 
 export default function Home() {
- const {isReady} = useStore()
+  const { isReady } = useStore();
 
   return isReady ? (
     <>
@@ -25,6 +25,6 @@ export default function Home() {
       <Tech />
     </>
   ) : (
-    <Splash  />
+    <Splash />
   );
 }

@@ -25,6 +25,7 @@ import {
   diva,
   airbnb,
   dashCraft,
+  finance,
 } from "@/assets";
 
 import next from "@/assets/next.png";
@@ -192,6 +193,34 @@ const projects = [
   //   image: three,
 
   // },
+  {
+    next: true,
+    name: `Finance Dashboard`,
+    description: `I've built it with Next.js, Hono, Prisma, Next-Auth ,it offers user registration, profile & transactions management, and financial tracking.
+`,
+    tags: [
+      {
+        name: `react`,
+        color: `blue-text-gradient`,
+      },
+
+      {
+        name: `NextJs 14`,
+        color: `text-red-800`,
+      },
+      {
+        name: `Tailwind`,
+        color: `text-cyan-400`,
+      },
+      {
+        name: `ShadCn UI`,
+        color: `text-green-600`,
+      },
+    ],
+    dir: `center`,
+    image: finance,
+    source_code_link: `https://finance-manager-sigma.vercel.app`,
+  },
   {
     next: true,
     name: `AirbBnb Clone`,

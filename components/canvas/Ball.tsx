@@ -32,7 +32,7 @@ const Ball = (props) => {
           rotation={[2 * Math.PI, 0, 25]}
           scale={1}
           map={decal}
-          flatShading
+          
         />
       </mesh>
     </Float>
@@ -42,14 +42,17 @@ const Ball = (props) => {
 const BallCanvas = ({ icon }) => {
   return (
     <div
-      className="cursor-grab"
+    
+      className="cursor-grab  "
+      
       onMouseDown={(e) => {
-        e.target.classList.add("cursor-grabbing");
-        e.target.classList.remove("cursor-grab");
+        e.currentTarget.classList.add("cursor-grabbing");
+        e.currentTarget.classList.remove("cursor-grab");
       }}
+
       onMouseUp={(e) => {
-        e.target.classList.remove("cursor-grabbing");
-        e.target.classList.add("cursor-grab");
+        e.currentTarget.classList.remove("cursor-grabbing");
+        e.currentTarget.classList.add("cursor-grab");
       }}
     >
       <Canvas

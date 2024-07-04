@@ -1,5 +1,5 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 "use client";
+
 import { useStore } from "@/utils/store";
 import anime from "animejs/lib/anime.es.js";
 
@@ -9,25 +9,6 @@ const Splash = () => {
   const { setIsReady } = useStore();
   const animation = () => {
     const loader = anime.timeline({ complete: () => setIsReady(true) });
-    const loader2 = anime.timeline({});
-    const loader3 = anime.timeline({});
-
-    loader2.add({
-      delay: 1100,
-      rotateZ: -135,
-      width: "250px",
-      targets: "#load2",
-      duration: 800,
-      easing: "easeInOutQuart",
-    });
-    loader3.add({
-      rotateZ: 135,
-      width: "250px",
-      targets: "#load",
-      delay: 1100,
-      duration: 800,
-      easing: "easeInOutQuart",
-    });
     loader
       .add({
         opacity: 1,
@@ -106,16 +87,6 @@ const Splash = () => {
         </text>
       </svg>
 
-      <div
-        style={{ translate: "-50% -50%" }}
-        id="load"
-        className=" bg-white fixed top-1/2 left-1/2  -z-10  blur-md  h-1  rounded-xl blur-x  w-0"
-      ></div>
-      <div
-        style={{ translate: "-50% -50%" }}
-        id="load2"
-        className=" bg-white h-1  fixed top-1/2 left-1/2 -z-10  blur-md  rounded-xl blur-x w-0"
-      ></div>
     </div>
   );
 };

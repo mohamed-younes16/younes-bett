@@ -10,7 +10,7 @@ import Image from "next/image";
 import { Globe } from "lucide-react";
 
 const Experience = () => {
-  const [limit, setlimit] = useState(3);
+  const [limit, setlimit] = useState(6);
   const handlego = (e, link) => {
     setTimeout(() => {
       link != "#contact"
@@ -24,7 +24,7 @@ const Experience = () => {
     <>
       <div className="max-w-7xl px-4 mx-auto mt-4" id="work">
         <motion.p
-          variants={textVariant()}
+          variants={textVariant(0)}
           initial="hidden"
           whileInView={"show"}
           viewport={{ once: true }}

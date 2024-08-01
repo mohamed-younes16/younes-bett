@@ -70,7 +70,7 @@ const Contact = () => {
   return (
     <div id="contact" className="max-w-7xl  mt-16 relative mx-auto   ">
       <div className="flex overflow-hidden max-lg:flex-col-reverse justify-between px-3 mt-6 z-20 relative items-center   gap-2  ">
-        <div className="flexcenter realtive items-end max-sm:w-full max-sm:items-center max-sm:flex-col flex-1">
+        <div className="flexcenter max-w-xl mx-auto realtive items-end max-sm:w-full max-sm:items-center max-sm:flex-col flex-1">
           <motion.div
             variants={slideIn("left", "tween", 0.2, 1)}
             initial="hidden"

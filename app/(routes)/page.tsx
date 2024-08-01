@@ -10,12 +10,11 @@ export default function Home() {
 
   return isReady ? (
     <>
-      {" "}
       <div
         className="hero bg-cover transition-all  duration-100 bg-no-repeat bg-center 
         relative w-full    p-0    "
       >
-        <Navbar />
+
         <Percentage />
 
         <Hero />

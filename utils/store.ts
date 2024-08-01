@@ -6,6 +6,6 @@ type Store = {
 };
 
 export const useStore = create<Store>()((set) => ({
-  isReady: false,
+  isReady: true,
   setIsReady: (v: boolean) => set((state) => ({ isReady: v })),
 }));

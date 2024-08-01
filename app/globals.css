@@ -13,38 +13,16 @@
   initial-value: 0%;
   inherits: false;
 }
-html.lenis {
-  height: auto;
-}
 
-.lenis.lenis-smooth {
-  scroll-behavior: auto;
-}
-
-.lenis.lenis-smooth [data-lenis-prevent] {
-  overscroll-behavior: contain;
-}
-.flexcenter  {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 ::-webkit-scrollbar {
-  width: 8px;
+  display: none !important;
 }
 ::-webkit-scrollbar-thumb {
+  display: none !important;
+}
+*::selection {
+  color: black;
   background-color: white;
-  border-radius: 15px;
-}
-::-webkit-scrollbar-track {
-  width: 8px;
-}
-.lenis.lenis-stopped {
-  overflow: hidden;
-}
-
-.lenis.lenis-scrolling iframe {
-  pointer-events: none;
 }
 a {
   color: inherit;
@@ -59,9 +37,6 @@ html {
   background-color: white;
 }
 * {
-  -webkit-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
   margin: 0;
   padding: 0;
   box-sizing: border-box;

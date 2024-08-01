@@ -1,22 +1,17 @@
 "use client";
 
-
 import GlassMove from "./GlassMove";
 
 const Hero = () => {
-
   return (
     <section
-    id="hero"
+      id="hero"
       className=" p-0 relative flex flex-col items-center 
       w-full  "
     >
-     
-          <GlassMove />
-      
-     
 
-      <div className="max-w-7xl px-6 flex gap-6 inset-0 mt-[70px] max-sm:mt-28   items-start  mx-auto">
+
+      <div className="max-w-7xl px-6 flex gap-6 inset-0    items-start  mx-auto">
         <div className="flex flex-col items-center">
           <div className="rounded-full bg-violet-500 h-5 w-5 mt-8"></div>
           <div className="violet-gradient w-1 h-40 rounded-b-3xl"> </div>

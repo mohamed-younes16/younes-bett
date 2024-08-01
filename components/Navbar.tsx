@@ -15,7 +15,7 @@ const Navbar = () => {
     >
       <div className="container mx-auto">
         <div className="flex top justify-between flex-wrap max-sm:flex-col  items-center">
-          <Link
+          <Link 
             href={"/"}
             className="link font-bold flex items-center  gap-4 text-white"
           >

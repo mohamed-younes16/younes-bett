@@ -31,6 +31,34 @@ module.exports = {
         "black-100": "#262a33",
         "black-200": "#090325",
         "white-100": "#f3f3f3",
+        border: "hsl(var(--border))",
+        input: "hsl(var(--input))",
+        main: "#7540A9",
+        "dark-main": "#353346",
+        minor: "#C8C7FF",
+        ring: "hsl(var(--ring))",
+        background: "hsl(var(--background))",
+        foreground: "hsl(var(--foreground))",
+        destructive: {
+          DEFAULT: "hsl(var(--destructive))",
+          foreground: "hsl(var(--destructive-foreground))",
+        },
+        muted: {
+          DEFAULT: "hsl(var(--muted))",
+          foreground: "hsl(var(--muted-foreground))",
+        },
+        accent: {
+          DEFAULT: "hsl(var(--accent))",
+          foreground: "hsl(var(--accent-foreground))",
+        },
+        popover: {
+          DEFAULT: "hsl(var(--popover))",
+          foreground: "hsl(var(--popover-foreground))",
+        },
+        card: {
+          DEFAULT: "hsl(var(--card))",
+          foreground: "hsl(var(--card-foreground))",
+        },
       },
       animation: {
         spotlight: "spotlight 2s ease .75s 1 forwards",

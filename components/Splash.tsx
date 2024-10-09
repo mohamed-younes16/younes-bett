@@ -49,7 +49,7 @@ const Splash = () => {
   return (
     <div
       onClick={() => setIsReady(true)}
-      className=" flex flex-col   bg-[url(/grid.svg)]  justify-center items-center  fixed inset-0 "
+      className=" flex flex-col h-screen   bg-[url(/grid.svg)]  justify-center items-center  fixed inset-0 "
     >
       <svg
         id="logo"
@@ -86,7 +86,6 @@ const Splash = () => {
           Y
         </text>
       </svg>
-
     </div>
   );
 };

@@ -3,10 +3,12 @@
 import { usePathname } from "next/navigation";
 import { AnimatePresence, motion, Variants } from "framer-motion";
 import { Navbar } from "@/components";
+import { useStore } from "@/utils/store";
+import SocialContact from "@/components/SocialContact";
 
 export default function RootLayout({ children }) {
   const path = usePathname();
-  console.log(path);
+  const { isReady } = useStore();
   const variants: Variants = {
     initial: {
       y: "0%",
@@ -20,7 +22,14 @@ export default function RootLayout({ children }) {
   };
   return (
     <>
-      <Navbar />{" "}
+      {isReady && (
+        <>
+          <Navbar />
+          <div className=" p-0 md:fixed max-md:hidden z-50 bottom-[0px] left-4  transition-all  duration-100   ">
+            <SocialContact />
+          </div>
+        </>
+      )}
       <AnimatePresence mode="wait" initial={false}>
         <motion.div
           animate={"animate"}

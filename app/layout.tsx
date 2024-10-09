@@ -21,15 +21,15 @@ export default function RootLayout({ children }) {
       className={`${Titillium.className} bg-black `}
       lang="en"
     >
-      <body className="pt-[70px] max-md:pt-[115px]">
+      <body className="">
       
         <Analytics />
-        <GlassMove />
+        {/* <GlassMove /> */}
 
         <main id="main" className=" bg-[url(/grid.svg)]  min-h-screen  ">
           <Toaster richColors position="top-center" />
 
-          <div className=" main z-0  overflow-hidden">{children}</div>
+          <div >{children}</div>
         </main>
       </body>
     </html>

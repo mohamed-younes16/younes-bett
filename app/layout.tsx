@@ -8,7 +8,6 @@ const Titillium = Titillium_Web({
 import { Analytics } from "@vercel/analytics/react";
 import { Toaster } from "sonner";
 import GlassMove from "@/components/GlassMove";
-import { Navbar } from "@/components";
 export const metadata = {
   title: "Younes Bett",
   description: "Portfolio of web developper",
@@ -24,7 +23,7 @@ export default function RootLayout({ children }) {
       <body className="">
       
         <Analytics />
-        {/* <GlassMove /> */}
+        <GlassMove />
 
         <main id="main" className=" bg-[url(/grid.svg)]  min-h-screen  ">
           <Toaster richColors position="top-center" />

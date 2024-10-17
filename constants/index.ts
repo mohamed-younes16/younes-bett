@@ -221,33 +221,6 @@ const projects = [
     image: finance,
     source_code_link: `https://finance-manager-sigma.vercel.app`,
   },
-  {
-    next: true,
-    name: `AirbBnb Clone`,
-    description: `full-stack airbnb clone web application using the latest web development technologies including React, Tailwind, Prisma , ShadCn UI, and Clerk.`,
-    tags: [
-      {
-        name: `react`,
-        color: `blue-text-gradient`,
-      },
-
-      {
-        name: `NextJs 14`,
-        color: `text-red-800`,
-      },
-      {
-        name: `Tailwind`,
-        color: `text-cyan-400`,
-      },
-      {
-        name: `ShadCn UI`,
-        color: `text-green-600`,
-      },
-    ],
-    dir: `left`,
-    image: airbnb,
-    source_code_link: `https://air-clo.vercel.app`,
-  },
 
   {
     next: true,
@@ -337,6 +310,33 @@ const projects = [
     dir: `center`,
     image: dashCraft,
     source_code_link: `https://dashcraft.vercel.app`,
+  },
+  {
+    next: true,
+    name: `AirbBnb Clone`,
+    description: `full-stack airbnb clone web application using the latest web development technologies including React, Tailwind, Prisma , ShadCn UI, and Clerk.`,
+    tags: [
+      {
+        name: `react`,
+        color: `blue-text-gradient`,
+      },
+
+      {
+        name: `NextJs 14`,
+        color: `text-red-800`,
+      },
+      {
+        name: `Tailwind`,
+        color: `text-cyan-400`,
+      },
+      {
+        name: `ShadCn UI`,
+        color: `text-green-600`,
+      },
+    ],
+    dir: `left`,
+    image: airbnb,
+    source_code_link: `https://air-clo.vercel.app`,
   },
   {
     next: true,

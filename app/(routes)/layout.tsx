@@ -13,13 +13,16 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   const { isReady } = useStore();
   const variants: Variants = {
     initial: {
-      y: "0%",
+      x: "0%",
+      opacity:1, 
     },
     animate: {
-      y: "-100%",
+      x: "-100%",
+      opacity:1 , 
     },
     exit: {
-      y: ["100%", "0%"],
+      x: ["100%", "0%"],
+      opacity: [0, 1],
     },
   };
   return (
@@ -36,26 +39,26 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <motion.div
           animate={"animate"}
           className="fixed inset-0 
-          pointer-events-none z-[999] h-[200vh] w-screen rounded-[25%] bg-black"
+          pointer-events-none z-[999] h-[110vh] w-screen  bg-black"
           key={path}
           variants={variants}
           initial="initial"
           exit={"exit"}
           transition={{
-            duration: 1,
+            duration: .5,
             ease: "easeIn",
           }}
         ></motion.div>{" "}
         <motion.div
           exit={{
-            scale: 0.8,
+            scale: 0.9,
           }}
           initial={{
-            scale: 0.8,
+            scale: 0.9,
           }}
           animate={{ scale: 1 }}
           transition={{
-            duration: 1,
+            duration: .5,
           }}
         >
           {children}{" "}

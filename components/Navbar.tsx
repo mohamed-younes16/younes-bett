@@ -21,7 +21,7 @@ const Navbar = () => {
             className="link font-bold flex items-center text-base  gap-4 text-accent-foreground/80 "
           >
             <Image src={logo} alt="" className=" h-10 w-8" />
-            <p>Younes | Web-Developper </p>
+            <p>Younes</p>
           </Link>
           <div className="flex items-center gap-4">
             <ul className="flex items-center gap-12 max-sm:mt-4 text-xl">
